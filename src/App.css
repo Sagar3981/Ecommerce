@@ -1,0 +1,144 @@
+body {
+  background-color: whitesmoke !important;
+}
+.headercard {
+  /* margin-bottom: 10px; */
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchcard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.searchcontainer {
+  border: 1px solid #1d3dda;
+  border-radius: 5px;
+  padding: 0px 8px;
+}
+.searchcontainer input {
+  border: none;
+  outline: none;
+  width: 399px;
+  padding: 8px 8px;
+}
+
+.logo {
+  width: 100px;
+  height: 81px;
+}
+.homeicon {
+  font-size: 27px;
+}
+
+.container-fluid {
+  box-shadow: 0px 0px 2px;
+}
+.cartbag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.hover-or-click:hover .dropdown-menu {
+  display: block;
+  margin-top: 0.5rem;
+}
+.hover-or-click .dropdown-menu {
+  display: none;
+}
+.hover-or-click:focus-within .dropdown-menu {
+  display: block;
+}
+
+.categories {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.topcategoriesitemscard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* App.css */
+
+/* carousel styles  start*/
+
+.carousel-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.carousel-slide {
+  position: relative;
+}
+
+.shop-now-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 24px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #e64a19;
+}
+
+/* carousel styles  end*/
+
+/*  ectronics contrainecss start */
+.econtainercard {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 3px;
+}
+.econtainercard img {
+  width: 150px;
+  height: auto;
+  padding: 10px 10px;
+}
+
+.emaincard {
+  background-color: white;
+  border-radius: 13px;
+  margin: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 11px;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px;
+}
+/* elctronics css end */
