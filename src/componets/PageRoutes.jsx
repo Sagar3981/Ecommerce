@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Home from "./Pages/Home";
 
 const PageRoutes = () => {
+  const Home = lazy(() => import("../componets/Pages/Home"));
   return (
     <>
       <Suspense>

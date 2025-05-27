@@ -1,26 +1,91 @@
+import { useState } from "react";
+
 const Elctronics = () => {
   const items = [
-    { name: "sagar", img: "assets/img/w2.webp" },
-    { name: "sagar2", img: "assets/img/a2.webp" },
-    { name: "sagar3", img: "assets/img/a3.webp" },
-    { name: "sagar4", img: "assets/img/e1.webp" },
+    {
+      img: "assets/img/w2.webp",
+      description: "Best Model watches",
+      heading: "Noise",
+    },
+    {
+      img: "assets/img/a2.webp",
+      description: "Smart Fitness Band",
+      heading: "Fitbit",
+    },
+    {
+      img: "assets/img/a3.webp",
+      description: "High Quality Earbuds",
+      heading: "Sony",
+    },
+    {
+      img: "assets/img/e1.webp",
+      description: "Latest Smartwatch",
+      heading: "Apple Watch",
+    },
+    {
+      img: "assets/img/b1.avif",
+      description: "Wireless Headphones",
+      heading: "Bose",
+    },
+    {
+      img: "assets/img/b2.avif",
+      description: "4K Action Camera",
+      heading: "GoPro",
+    },
+    {
+      img: "assets/img/b3.avif",
+      description: "Gaming Mouse",
+      heading: "Logitech",
+    },
+    {
+      img: "assets/img/e5.webp",
+      description: "Mechanical Keyboard",
+      heading: "Corsair",
+    },
   ];
+
+  const [startIndex, setStartIndex] = useState(0);
+  const cardsToShow = 5;
+
+  const prev = () => {
+    setStartIndex((prev) =>
+      prev === 0 ? items.length - cardsToShow : prev - 1
+    );
+  };
+
+  const next = () => {
+    setStartIndex((prev) =>
+      prev + cardsToShow >= items.length ? 0 : prev + 1
+    );
+  };
+
+  // Slice the items array to get visible cards
+  const visibleCards = items.slice(startIndex, startIndex + cardsToShow);
+
+  // Handle wrap-around when slicing near the end
+  if (visibleCards.length < cardsToShow) {
+    visibleCards.push(...items.slice(0, cardsToShow - visibleCards.length));
+  }
 
   return (
     <div className="emaincard">
       <h1 className="section-title">Best Of Electronics</h1>
-      <div className="container">
-        <div className="row justify-content-center">
-          {items.map((item, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-sm-6">
-              <div className="econtainercard">
-                <img src={item.img} alt={item.name} />
-                <h2>{item.name}</h2>
-                <h1>fastrack</h1>
-              </div>
+      <div className="slider-container">
+        <button className="nav-button left" onClick={prev}>
+          ❮
+        </button>
+        <div className="card-row">
+          {visibleCards.map((item, index) => (
+            <div className="econtainercard" key={index}>
+              <img src={item.img} alt={item.heading} />
+              <p>{item.description}</p>
+              <h4>{item.heading}</h4>
             </div>
           ))}
         </div>
+        <button className="nav-button right" onClick={next}>
+          ❯
+        </button>
       </div>
     </div>
   );
