@@ -16,6 +16,7 @@ const Elctronics = () => {
               <div className="econtainercard">
                 <img src={item.img} alt={item.name} />
                 <h2>{item.name}</h2>
+                <h1>fastrack</h1>
               </div>
             </div>
           ))}
