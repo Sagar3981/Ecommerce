@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Elctronics = () => {
   const items = [
     { name: "sagar", img: "assets/img/w2.webp" },
@@ -7,7 +8,7 @@ const Elctronics = () => {
   ];
 
   return (
-    <div className="emaincard">
+    <Link to="/subCategories"><div className="emaincard">
       <h1 className="section-title">Best Of Electronics</h1>
       <div className="container">
         <div className="row justify-content-center">
@@ -22,7 +23,7 @@ const Elctronics = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div></Link>
   );
 };
 
