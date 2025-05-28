@@ -57,7 +57,9 @@ const Header = () => {
                 <i className="bi bi-shop me-2"></i> Become a Seller
               </button>
 
-              <Link to = "/cart"><i className="bi bi-cart homeicon"></i></Link>
+              <Link to="/cart">
+                <i className="bi bi-cart homeicon"></i>
+              </Link>
               <i className="bi bi-bag-check homeicon"></i>
             </div>
           </div>

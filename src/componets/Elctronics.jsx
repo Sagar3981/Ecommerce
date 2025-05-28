@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
 const Elctronics = () => {
   const items = [
     {
@@ -68,26 +69,28 @@ const Elctronics = () => {
   }
 
   return (
-    <div className="emaincard">
-      <h1 className="section-title">Best Of Electronics</h1>
-      <div className="slider-container">
-        <button className="nav-button left" onClick={prev}>
-          ❮
-        </button>
-        <div className="card-row">
-          {visibleCards.map((item, index) => (
-            <div className="econtainercard" key={index}>
-              <img src={item.img} alt={item.heading} />
-              <p>{item.description}</p>
-              <h4>{item.heading}</h4>
-            </div>
-          ))}
+    <Link to="/subCategories">
+      <div className="emaincard">
+        <h1 className="section-title">Best Of Electronics</h1>
+        <div className="slider-container">
+          <button className="nav-button left" onClick={prev}>
+            ❮
+          </button>
+          <div className="card-row">
+            {visibleCards.map((item, index) => (
+              <div className="econtainercard" key={index}>
+                <img src={item.img} alt={item.heading} />
+                <p>{item.description}</p>
+                <h4>{item.heading}</h4>
+              </div>
+            ))}
+          </div>
+          <button className="nav-button right" onClick={next}>
+            ❯
+          </button>
         </div>
-        <button className="nav-button right" onClick={next}>
-          ❯
-        </button>
       </div>
-    </div>
+    </Link>
   );
 };
 

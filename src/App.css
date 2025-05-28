@@ -157,6 +157,31 @@ body {
   flex-direction: column;
   /* box-shadow: 0px 0px 1px; */
 }
+.econtainercard {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 3px;
+}
+.econtainercard img {
+  width: 150px;
+  height: auto;
+  padding: 10px 10px;
+}
+
+.emaincard {
+  background-color: white;
+  border-radius: 13px;
+  margin: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 11px;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px;
+}
 
 .slider-container {
   position: relative;
@@ -1108,3 +1133,204 @@ body {
   color: #333;
   margin-bottom: 8px;
 }
+/* #######################SubCategories-Start##################### */
+.Filter-ProductList {
+  display: flex;
+  justify-content: center;
+}
+/* #######################Filter-Start########################## */
+
+.Filters {
+  width: 18%;
+  background-color: white;
+  margin: 10px;
+}
+.filter h5 {
+  padding: 20px 20px 0px 20px;
+  margin: 0;
+  font-size: 19px;
+}
+.filterCategories h6 {
+  padding: 0px 20px 0px 20px;
+  margin: 0;
+  font-size: 14px;
+}
+.price {
+  padding: 0px 20px;
+}
+.price h6 {
+  padding: 0px 0px 20px 0px;
+  margin: 0;
+  font-size: 14px;
+}
+.minPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+hr {
+  border: 1px solid rgb(208 208 208) !important;
+}
+.minPrice select {
+  width: 100px;
+  border: 1px solid #d8d4d4;
+}
+.HeadphoneType {
+  padding: 0px 20px 0px 20px;
+}
+.HeadphoneType h6 {
+  margin: 0;
+  font-size: 14px;
+  padding: 0px 0px 20px;
+}
+.Headphone-Type {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.Headphone-Type h5 {
+  margin: 0;
+  font-size: 14px;
+  padding: 0px 10px;
+  font-weight: 400;
+}
+.BRANDsearch {
+  border-bottom: 1px solid gray;
+  margin-bottom: 12px;
+}
+.BRANDsearch input {
+  border: none;
+  outline: none;
+}
+.BRANDsearch ::placeholder {
+  font-size: 12px;
+  padding: 0px 10px;
+}
+/* ###################Filter-end##################### */
+/* #######################ProductList-start########################*/
+.wishlistIcon {
+  width: 20px;
+  height: 20px;
+  color: #b2b0b0;
+  position: relative;
+  top: 29px;
+  left: 236px;
+}
+.whatchColors {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 20px;
+}
+.color1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: black;
+  margin: 0px 2px !important;
+}
+.color2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(126, 88, 96);
+  margin: 0px 2px !important;
+}
+.color3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: pink;
+  margin: 0px 2px;
+  margin: 0px 2px !important;
+}
+.color4 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: gray;
+  margin: 0px 2px;
+  margin: 0px 2px !important;
+}
+.color5 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(21, 11, 58);
+  margin: 0px 2px;
+  margin: 0px 2px !important;
+}
+.ProductList {
+  width: 80%;
+  background-color: white;
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Product-List {
+  width: 300px;
+  padding: 0px 15px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;
+}
+.watch1Img {
+  display: flex;
+  justify-content: center;
+}
+.watch1Img img {
+  width: 300px;
+}
+.Product-List h6 {
+  font-size: 14px;
+}
+.Product-List p {
+  font-size: 13px;
+  margin: 3px 0px;
+  color: gray;
+}
+.Product-List p span {
+  background-color: rgb(56, 142, 60);
+  color: white;
+  padding: 2px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.crosingPrice {
+  font-size: 16px;
+  color: gray;
+  text-decoration: line-through;
+}
+.off {
+  color: rgb(56, 142, 60);
+  font-size: 15px;
+  margin: 0px 8px;
+}
+/* #########################ProductList-end######################## */
+/* ########################SubCategories-end#######################*/
+
+/* ########################LoginPage-start#######################*/
+.loginCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.blueCard {
+  background-color: rgb(40, 116, 240);
+  width: 330px;
+  height: 500px;
+  padding: 40px 35px;
+  color: white;
+}
+.blueCard h1 {
+  font-size: 27px;
+  padding: 10px 0px 15px;
+}
+.blueCard h5 {
+  font-size: 18px;
+  color: rgb(219, 219, 220);
+}
+.flipkartlogin img {
+  width: 300px;
+}
+/* ########################LoginPage-end#######################*/
