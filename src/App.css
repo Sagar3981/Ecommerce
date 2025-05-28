@@ -117,17 +117,24 @@ body {
 
 /*  ectronics contrainecss start */
 .econtainercard {
-  background-color: white;
   display: flex;
+  background-color: whitesmoke;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 0px 3px;
+}
+
+.econtainercard:hover {
+  background-color: white;
+  box-shadow: 0px 0px 3px gray;
+}
+.econtainercard p {
+  margin: 28px 0px 0px 0px;
 }
 .econtainercard img {
-  width: 150px;
-  height: auto;
-  padding: 10px 10px;
+  width: 170px;
+  height: 190px;
+  /* padding: 10px 10px; */
 }
 
 .emaincard {
@@ -139,9 +146,142 @@ body {
   align-items: center;
   padding: 20px 11px;
   flex-direction: column;
-  box-shadow: 0px 0px 1px;
+  /* box-shadow: 0px 0px 1px; */
 }
+
+.slider-container {
+  position: relative;
+  width: 1450px; /* Adjust based on card width * cardsToShow */
+  margin: auto;
+  overflow: hidden;
+  padding: 10px 40px;
+}
+
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.econtainercard {
+  flex: 0 0 250px; /* Fixed width for each card */
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.econtainercard img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background-color: #222; */
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  /* padding: 10px 15px; */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-button.left {
+  left: 0;
+}
+
+.nav-button.right {
+  right: 0;
+}
+
 /* elctronics css end */
+
+/* footercard styles startr */
+
+.footercard {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 60px; /* Added equal spacing on both sides */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footerheadings {
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* change from center to start for better heading alignment */
+  align-items: center;
+  text-align: center;
+  min-height: 250px; /* ensure consistent height */
+  padding: 20px;
+}
+.footerheadings h5 {
+  color: #f1f1f1;
+  font-size: 18px;
+  margin-bottom: 15px;
+  min-height: 24px; /* optional: ensures same heading height line */
+}
+
+.footercard ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footercard ul li {
+  list-style: none;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footercard ul li:hover {
+  color: #f1c40f;
+}
+
+.footerheadings p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footerheadings ul.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.footerheadings ul.social-icons li {
+  list-style: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footerheadings ul.social-icons li:hover {
+  color: #f1c40f;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .footerheadings {
+    margin-bottom: 20px;
+  }
+
+  .footercard {
+    padding: 30px 20px;
+  }
+}
+
+/* footer card styles end  */
 
 /* ######################### ProductDetails css ################################### */
 /* Product Image Wrapper */
