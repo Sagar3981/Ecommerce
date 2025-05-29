@@ -3,6 +3,7 @@ import ReactImageMagnify from "react-image-magnify";
 import { BsHeart } from "react-icons/bs";
 import Header from "../common/Header";
 import { FaShoppingCart, FaBolt } from "react-icons/fa";
+import Elctronics from "../Elctronics.jsx";
 
 const ProductDetails = () => {
   const images = [
@@ -272,9 +273,73 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
+              <div className="ratings-reviews-section">
+                <h2>Ratings & Reviews</h2>
+
+                <div className="overall-rating">
+                  3.7 ★ <span>801 Ratings & 71 Reviews</span>
+                </div>
+
+                <div className="rating-breakdown">
+                  {[5, 4, 3, 2, 1].map((star) => (
+                    <div key={star} className="rating-bar">
+                      <span>{star}★</span>
+                      <div className="bar">
+                        <div
+                          className="bar-fill"
+                          style={{ width: `${Math.random() * 100}%` }} // Replace with real data
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rating-metrics">
+                  {[
+                    { label: "Sound Quality", score: 3.5 },
+                    { label: "Battery Backup", score: 3.9 },
+                    { label: "Design & Comfort", score: 3.7 },
+                  ].map((metric, index) => (
+                    <div key={index} className="metric">
+                      <div className="metric-circle">{metric.score}</div>
+                      {metric.label}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="review-thumbnails">
+                  <img src="/assets/img/a1.webp" alt="thumb1" />
+                  <img src="/assets/img/a2.webp" alt="thumb2" />
+                  <img src="/assets/img/a3.webp" alt="thumb3" />
+                  <img src="/assets/img/a4.webp" alt="thumb4" />
+                </div>
+
+                <div className="review-card">
+                  <div className="rating">5★ Wonderful</div>
+                  <p>Mind blowing superb quality long time battery backup,</p>
+                  <div className="user-info">
+                    Shailendra Shukla • New Delhi • Apr 2024
+                  </div>
+                  <div className="feedback">👍 8 👎 1</div>
+                </div>
+
+                <div className="review-card">
+                  <div className="rating">4★ Very Good</div>
+                  <p>
+                    Nice product and works well with long calls and meetings.
+                  </p>
+                  <div className="user-info">
+                    Anjali Mehta • Mumbai • Mar 2024
+                  </div>
+                  <div className="feedback">👍 5 👎 0</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <Elctronics />
+        <Elctronics />
+        <Elctronics />
       </div>
     </>
   );
