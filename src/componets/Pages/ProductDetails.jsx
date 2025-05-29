@@ -4,6 +4,7 @@ import { BsHeart } from "react-icons/bs";
 import Header from "../common/Header";
 import { FaShoppingCart, FaBolt } from "react-icons/fa";
 import Elctronics from "../Elctronics.jsx";
+import Footer from "../common/Footer.jsx";
 
 const ProductDetails = () => {
   const images = [
@@ -341,6 +342,7 @@ const ProductDetails = () => {
         <Elctronics />
         <Elctronics />
       </div>
+      <Footer />
     </>
   );
 };
