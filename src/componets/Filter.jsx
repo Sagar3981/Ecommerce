@@ -43,15 +43,15 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>HEADPHONE TYPE</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>In the Ear</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>On the Ear</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>True Wireless</h5>
                     </div>
                 </div>
@@ -59,15 +59,15 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>CONECTIVITY</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Bluetooth</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Bluetooth & Wired</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Wired</h5>
                     </div>
                 </div>
@@ -75,19 +75,19 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>CUSTOMER RATINGS</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>4<span><MdOutlineStar /></span> Above</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>3<span><MdOutlineStar /></span> Above</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>2<span><MdOutlineStar /></span> Above</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>1<span><MdOutlineStar /></span> Above</h5>
                     </div>
                 </div>
@@ -99,27 +99,27 @@ const Filter = () => {
                         <input type="text" placeholder="Search Brand" />
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>boAt</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>OnePlus</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>realme</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Boult</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>SONY</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>CMF by Nothing</h5>
                     </div>
                 </div>
@@ -127,23 +127,23 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>DISCOUNT</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>50% or more</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>40% or more</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>30% or more</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>20% or more</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>10% or more</h5>
                     </div>
                 </div>
@@ -151,27 +151,27 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>FEATURES</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Deep Bass</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Fast Charging</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>FoldableCollapsible</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Noise cancellation</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>True Wireless</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Water Resistant</h5>
                     </div>
                 </div>
@@ -179,23 +179,23 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>HEADPHONE DESIGN</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Behind the Neck</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Earbud</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Earwings</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Foldable Over the Head</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Over the Head</h5>
                     </div>
                 </div>
@@ -203,55 +203,55 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>COLOR </h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Beige</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Black</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Blue</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Brown</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Gold</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Green</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Grey</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Maroon</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Pink</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Purple</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Red</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Silver</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>White</h5>
                     </div>
                 </div>
@@ -259,11 +259,11 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>OFFER</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Buy More,Save More</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Special Price</h5>
                     </div>
                 </div>
@@ -271,7 +271,7 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>AVAILABLITY</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Include Out of Stock</h5>
                     </div>
                 </div>
@@ -279,7 +279,7 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>GST INVOICE AVAILABLE</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>GST invoice Available</h5>
                     </div>
                 </div>
@@ -287,7 +287,7 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6>NEW ARRIVALS</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>New Arrivals</h5>
                     </div>
                 </div>
@@ -295,27 +295,27 @@ const Filter = () => {
                 <div className="HeadphoneType">
                     <h6> COMPATIBLE WITH</h6>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5> Audio Player</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5> Desktop</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5> Gaming Console</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Laptop</h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Mobile </h5>
                     </div>
                     <div className="Headphone-Type">
-                        <MdCheckBoxOutlineBlank />
+                        <input type="checkbox" />
                         <h5>Tablet</h5>
                     </div>
 
