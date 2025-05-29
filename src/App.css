@@ -594,6 +594,26 @@ body {
 }
 /* ######################### ProductDetails css ################################### */
 /* Product Image Wrapper */
+.productDetails-main-container {
+  background-color: whitesmoke;
+  margin-top: 5px;
+  padding: 0px 150px;
+}
+
+.productDetails-constainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: white;
+  padding: 10px;
+}
+
+.productDetails-img-container {
+  width: 40%;
+}
+.productDetails-info-container {
+  width: 60%;
+}
 .product-image-wrapper {
   background-color: #fff;
   border-radius: 12px;

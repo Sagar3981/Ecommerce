@@ -21,9 +21,9 @@ const ProductDetails = () => {
   return (
     <>
       <Header />
-      <div className="container py-5 bg-white mt-1">
-        <div className="row">
-          <div className="col-lg-5">
+      <div className="container productDetails-main-container">
+        <div className="row productDetails-constainer">
+          <div className="productDetails-img-container">
             <div className="product-image-wrapper shadow-sm p-3 rounded bg-white position-relative">
               <div className="wishlist-button">
                 <button className="btn btn-light shadow-sm rounded-circle">
@@ -49,7 +49,7 @@ const ProductDetails = () => {
                       marginLeft: "30px",
                     },
                     enlargedImageContainerDimensions: {
-                      width: "150%",
+                      width: "140%",
                       height: "150%",
                     },
                   }}
@@ -77,8 +77,7 @@ const ProductDetails = () => {
               </button>
             </div>
           </div>
-
-          <div className="col-lg-7">
+          <div className="productDetails-info-container">
             <div className="product-info-container">
               <h1 className="product-title">
                 PLAY Latest Smart Android 13 1+8G 5G WiFi BT 15k Lm 4k 8k 180
@@ -195,84 +194,6 @@ const ProductDetails = () => {
               </div>
 
               {/* Specifications Box */}
-              <div className="specs-box mt-4">
-                <h5 className="specs-title">Specifications</h5>
-
-                <div className="specs-section">
-                  <h6>General</h6>
-                  <div className="spec-item">
-                    <b>Sales Package:</b> Advance Play Projector*1, User manual
-                    *1, Remote controller *1, AV cable *1, Warranty Card*1,
-                    Power Cable*1, 3D Glass*1
-                  </div>
-                  <div className="spec-item">
-                    <b>Model Name:</b> Latest Smart Android 13 1+8G 5G WiFi BT
-                    15k Lm 4k 8k 180 degree Rotation
-                  </div>
-                  <div className="spec-item">
-                    <b>Part Number:</b> Victory AVI
-                  </div>
-                  <div className="spec-item">
-                    <b>Color:</b> Black
-                  </div>
-                  <div className="spec-item">
-                    <b>Portable:</b> Yes
-                  </div>
-                  <div className="spec-item">
-                    <b>Maximum Brightness:</b> 25000 lm
-                  </div>
-                  <div className="spec-item">
-                    <b>Light Source:</b> LED
-                  </div>
-                  <div className="spec-item">
-                    <b>Minimum Projection Distance:</b> 120 inch
-                  </div>
-                  <div className="spec-item">
-                    <b>Projection Ratio:</b> 30-300 inches
-                  </div>
-                  <div className="spec-item">
-                    <b>Internal Storage:</b> 8000 MB
-                  </div>
-                  <div className="spec-item">
-                    <b>Mounting:</b> Ceiling, Front, Rear
-                  </div>
-                </div>
-
-                <div className="specs-section mt-4">
-                  <h6>Display And Audio Features</h6>
-                  <div className="spec-item">
-                    <b>HD Graphic Mode:</b> 1080
-                  </div>
-                  <div className="spec-item">
-                    <b>3D Support:</b> Yes
-                  </div>
-                  <div className="spec-item">
-                    <b>3D Glasses Type:</b> Red & Blue Passive 3D Glass
-                  </div>
-                  <div className="spec-item">
-                    <b>Dynamic Contrast Ratio:</b> 15000:1
-                  </div>
-                  <div className="spec-item">
-                    <b>Graphic Mode:</b> 1*HDMI\AV\1*USB\1*3.5 Audio Port
-                  </div>
-                  <div className="spec-item">
-                    <b>Adjustable Aspect Ratio:</b> 16:9
-                  </div>
-                  <div className="spec-item">
-                    <b>Standard Brightness:</b> 25000 lm
-                  </div>
-                  <div className="spec-item">
-                    <b>Other Display Features:</b> Projection Distance (1–4m),
-                    Scale 50%, Throw Ratio 1.25:1
-                  </div>
-                  <div className="spec-item">
-                    <b>Output Per Speaker:</b> 5 W
-                  </div>
-                  <div className="spec-item">
-                    <b>Other Audio Features:</b> Multi-language Support
-                  </div>
-                </div>
-              </div>
               <div className="specs-box mt-4">
                 <h5 className="specs-title">Specifications</h5>
 
