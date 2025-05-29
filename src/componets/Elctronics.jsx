@@ -69,13 +69,13 @@ const Elctronics = () => {
   }
 
   return (
-    <Link to="/subCategories">
-      <div className="emaincard">
-        <h1 className="section-title">Best Of Electronics</h1>
-        <div className="slider-container">
-          <button className="nav-button left" onClick={prev}>
-            ❮
-          </button>
+    <div className="emaincard">
+      <h1 className="section-title">Best Of Electronics</h1>
+      <div className="slider-container">
+        <button className="nav-button left" onClick={prev}>
+          ❮
+        </button>
+        <Link to="/subCategories">
           <div className="card-row">
             {visibleCards.map((item, index) => (
               <div className="econtainercard" key={index}>
@@ -85,12 +85,12 @@ const Elctronics = () => {
               </div>
             ))}
           </div>
-          <button className="nav-button right" onClick={next}>
-            ❯
-          </button>
-        </div>
+        </Link>
+        <button className="nav-button right" onClick={next}>
+          ❯
+        </button>
       </div>
-    </Link>
+    </div>
   );
 };
 

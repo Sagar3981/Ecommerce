@@ -57,10 +57,15 @@ const Header = () => {
                 <i className="bi bi-shop me-2"></i> Become a Seller
               </button>
 
-              <Link to="/cart">
-                <i className="bi bi-cart homeicon"></i>
-              </Link>
-              <i className="bi bi-bag-check homeicon"></i>
+              <div className="cart-wrapper">
+                <Link to="/cart">
+                  <i className="bi bi-cart homeicon"></i>
+                </Link>
+                <span className="cart-badge">3</span>{" "}
+                {/* dynamic count goes here */}
+              </div>
+
+              {/* <i className="bi bi-bag-check homeicon"></i> */}
             </div>
           </div>
         </div>
