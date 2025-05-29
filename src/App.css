@@ -324,10 +324,15 @@ hr {
     align-items: center;
     height: 100vh;
 }
+.fullWhiteCrad {
+    background-color: white;
+    width: 850px;
+    display: flex;
+}
 .blueCard {
     background-color: rgb(40, 116, 240);
     width: 330px;
-    height: 500px;
+    height: 529px;
     padding: 40px 35px;
     color: white;
 }
@@ -339,7 +344,72 @@ hr {
     font-size: 18px;
     color: rgb(219, 219, 220);
 }
-.flipkartlogin img {
-    width: 300px;
+.flipkartlogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 423px;
 }
+.flipkartlogin img {
+    width: 454px;
+}
+.whiteCard {
+    width: 550px;
+    background-color: white;
+    height: 536px;
+    padding: 50px 35px;
+}
+.email-number input {
+    border: none;
+    outline: none;
+    width: 450px;
+}
+.email-number label {
+    color: gray;
+}
+.email-number {
+    border-bottom: 1px solid rgb(40, 116, 240);
+}
+.line1 {
+    margin: 0px !important;
+}
+.whiteCard p {
+    margin-top: 40px;
+    color: gray;
+    font-size: 13px;
+}
+.whiteCard p span {
+    color: blue;
+}
+.otpBtn button {
+    width: 450px;
+    border: none;
+    background-color: rgb(251, 100, 27);
+    color: white;
+    padding: 9px;
+    font-size: 19px;
+}
+.loginBtn {
+    margin: 12px 0px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.loginBtn button {
+    width: 450px;
+    border: none;
+    background-color: white;
+    color: rgb(40, 116, 240);
+    padding: 11px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.whiteCard h6 {
+    color: rgb(40, 116, 240);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 43vh;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 /* ########################LoginPage-end#######################*/
