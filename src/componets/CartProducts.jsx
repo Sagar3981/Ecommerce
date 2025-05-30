@@ -1,4 +1,3 @@
-import { Hr } from "react-bootstrap-icons"
 import { MdVerifiedUser } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
