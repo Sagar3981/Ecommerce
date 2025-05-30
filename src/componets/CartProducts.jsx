@@ -1,7 +1,9 @@
 import { Hr } from "react-bootstrap-icons"
 import { MdVerifiedUser } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const CartProducts = () =>{
+    const navigate=useNavigate()
     return(
         <>
         <div className="total-div">
@@ -191,11 +193,12 @@ const CartProducts = () =>{
 
         </div>
         <div className="place-order">
-            <button>place order</button>
+            <button onClick={()=> navigate("/checkout")}>place order</button>
         </div>
         </div>
         <div className="price-container">
-            <div className="price-details">
+           <div className="price-container-sticky">
+             <div className="price-details">
                 <h1>price details</h1>
                 <hr />
             </div>
@@ -231,6 +234,7 @@ const CartProducts = () =>{
                 <MdVerifiedUser className="MdVerifiedUser-icon"/>
                 <p>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
             </div>
+           </div>
             
         </div>
         </div>

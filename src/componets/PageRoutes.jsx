@@ -12,6 +12,8 @@ const PageRoutes = () => {
     import("../componets/Pages/SubCategories.jsx")
   );
   const AllOrders = lazy(() => import("../componets/Pages/AllOrders.jsx"));
+  const CheckOut = lazy (() => import("./Pages/CheckOut.jsx"))
+  const PaymentPage = lazy (() => import("./Pages/PaymentPage.jsx"))
   return (
     <>
       <Suspense>
@@ -22,6 +24,8 @@ const PageRoutes = () => {
           <Route path="/loginpage" element={<Loginpage />} />
           <Route path="/subCategories" element={<SubCategories />} />
           <Route path="/MyOrders" element={<AllOrders />} />
+          <Route path="/checkout" element={<CheckOut/>}/>
+          <Route path="/payment-page" element={<PaymentPage/>}/>
         </Routes>
       </Suspense>
     </>
