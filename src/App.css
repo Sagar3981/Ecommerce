@@ -1474,13 +1474,12 @@ hr {
 }
 
 .right-section {
-  flex: 1;
+  flex: 1 1 0;
   min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .shipping-details,
 .price-details {
   border: 1px solid #ddd;
@@ -1506,8 +1505,28 @@ hr {
   font-size: 14px;
 }
 
-.price-details p {
-  margin: 4px 0;
+.price-details {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  /* NEW: prevents horizontal overflow */
+}
+.price-details h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+
+.price-details-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
   font-size: 15px;
   color: #333;
 }
@@ -1516,12 +1535,19 @@ hr {
   font-weight: bold;
   margin-top: 10px;
   color: #000;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price-details .cod {
   font-size: 13px;
   color: #555;
-  margin-top: 4px;
+  margin-top: 6px;
+  padding-left: 16px;
+}
+
+.price-details-row span {
+  outline: 1px dotted blue;
 }
 
 /* order page status end */
