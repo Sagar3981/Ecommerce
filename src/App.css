@@ -1,5 +1,6 @@
 body {
   background-color: whitesmoke !important;
+  margin: 0px;
 }
 
 a {
@@ -1650,3 +1651,190 @@ hr {
   align-items: center;
   color: #777;
 }
+
+/* /////////////////////////////////////// all Orders start /////////////////////////////////////// */
+/* Layout */
+.orders-page {
+  display: flex;
+  background-color: #f6f7fb;
+  padding: 24px;
+  min-height: 100vh;
+  gap: 24px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  align-self: flex-start;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.filter-group input {
+  margin-right: 8px;
+}
+
+/* Content Area */
+.orders-content {
+  flex: 1;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Order Card */
+.order-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-header {
+  display: flex;
+  gap: 16px;
+}
+
+.order-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #f2f2f2;
+}
+
+.order-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px 0px 5px 0px;
+}
+
+.order-details .small-text {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.order-meta {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.badge.yellow {
+  background-color: #fff7e6;
+  color: #e07c13;
+}
+
+.badge.red {
+  background-color: #ffecec;
+  color: #d93025;
+}
+
+.badge.green {
+  background-color: #e6f4ea;
+  color: #188038;
+}
+
+.note {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.review-btn {
+  background: none;
+  border: none;
+  color: #2874f0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 6px;
+}
+
+/* Refund Info */
+.refund-info {
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1b4332;
+  margin-top: 16px;
+  border: 1px solid #e6f4ea;
+}
+
+/* Footer Text */
+.no-more-results {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 28px;
+}
+
+/* /////////////////////////////////////// all Orders end /////////////////////////////////////// */

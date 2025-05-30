@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import Header from "../common/Header";
 import CarouselComponent from "../Carousel";
 import Elctronics from "../Elctronics";
