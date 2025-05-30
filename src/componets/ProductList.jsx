@@ -3,7 +3,6 @@ import { IoMdStar } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosHeart } from "react-icons/io";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 const ProductList = () => {
   return (
     <>
