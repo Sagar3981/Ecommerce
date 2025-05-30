@@ -9,6 +9,7 @@ const PageRoutes = () => {
   );
   const Loginpage = lazy(() => import("../componets/LoginPage"));
   const SubCategories = lazy(() => import("../componets/Pages/SubCategories"));
+  const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
   return (
     <>
       <Suspense>
@@ -18,6 +19,7 @@ const PageRoutes = () => {
           <Route path="/ProductDetails" element={<ProductDetails />} />
           <Route path="/loginpage" element={<Loginpage />} />
           <Route path="/subCategories" element={<SubCategories />} />
+          <Route path="/OrderDetails" element={<OrderDetails />} />
         </Routes>
       </Suspense>
     </>
