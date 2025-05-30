@@ -5,6 +5,13 @@ const PageRoutes = () => {
   const ProductDetails = lazy(() =>
     import("../componets/Pages/ProductDetails.jsx")
   );
+  const Home = lazy(() => import("../componets/Pages/Home.jsx"));
+  const Cart = lazy(() => import("../componets/Pages/Cart.jsx"));
+  const Loginpage = lazy(() => import("../componets/LoginPage.jsx"));
+  const SubCategories = lazy(() =>
+    import("../componets/Pages/SubCategories.jsx")
+  );
+  const AllOrders = lazy(() => import("../componets/Pages/AllOrders.jsx"));
   return (
     <>
       <Suspense>
