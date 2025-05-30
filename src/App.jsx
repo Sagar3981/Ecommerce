@@ -1,11 +1,10 @@
-import "./App.css";
+import "../src/app.css";
 import PageRoutes from "./componets/PageRoutes";
-import CheckOut from "./componets/Pages/CheckOut";
 
 function App() {
   return (
     <>
-      <PageRoutes/>
+      <PageRoutes />
     </>
   );
 }
