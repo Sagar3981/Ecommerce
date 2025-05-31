@@ -30,7 +30,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to="/MyOrders">
+                  <Link to="/AllOrders">
                     <p className="dropdown-item">My Orders</p>
                   </Link>
                 </li>

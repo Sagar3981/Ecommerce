@@ -29,6 +29,7 @@ const PageRoutes = () => {
           <Route path="/subCategories" element={<SubCategories />} />
           {/* <Route path="/OrderDetails" element={<OrderDetails />} /> */}
           <Route path="/StatusPage" element={<StatusPage />} />
+          <Route path="/AllOrders" element={<AllOrders />} />
         </Routes>
       </Suspense>
     </>
