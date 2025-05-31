@@ -5,6 +5,9 @@ const Loginpage = () => {
     const handleClick = () => {
         setLogin(true)
     }
+    const handleBackToLogin = () => {
+        setLogin(false)
+    }
     return (
         <>
             <div className="loginCard">
@@ -13,7 +16,7 @@ const Loginpage = () => {
                         <h1>{login ? "Sign Up" : "Login"}</h1>
                         <h5>{login ? "Looks like you're new here! Sign up to get started" : "Get access to your Orders, Wishlist and Recommendations"}</h5>
                         < div className="flipkartlogin">
-                            <img src="/public/assets/loginPageImg/loginffkt-removebg-preview.png" alt="" />
+                            <img src="/assets/loginPageImg/loginffkt-removebg-preview.png" alt="" />
                         </div>
                     </div>
                     <div className="whiteCard">
@@ -27,7 +30,7 @@ const Loginpage = () => {
                             <button>{login ? "Continue" : "Request OTP"}</button>
                         </div>
                         {login && <div className="loginBtn">
-                            <button>Existing User?Login in</button>
+                            <button onClick={handleBackToLogin}>Existing User?Login in</button>
                         </div>}
                         {!login && <div>
                             <h6 onClick={handleClick}>New to Flipkart? Create an account</h6>

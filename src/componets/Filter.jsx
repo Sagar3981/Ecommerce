@@ -1,4 +1,4 @@
-import { MdCheckBoxOutlineBlank } from "react-icons/md";
+
 import { MdOutlineStar } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 const Filter = () => {

@@ -1,5 +1,6 @@
-
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="container-fluid">
       <div className="row">
@@ -20,12 +21,13 @@ const Header = () => {
                 id="loginDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                onClick={() => navigate('/loginpage')}
               >
                 <i className="bi bi-person me-2"></i> Login
               </button>
               <ul className="dropdown-menu" aria-labelledby="loginDropdown">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" onClick={() => navigate("/profile")} href="#">
                     New User? Register
                   </a>
                 </li>
@@ -63,7 +65,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
