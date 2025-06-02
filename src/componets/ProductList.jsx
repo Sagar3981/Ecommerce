@@ -2,20 +2,20 @@ import { LiaRupeeSignSolid } from "react-icons/lia";
 import { IoMdStar } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosHeart } from "react-icons/io";
-import { motion } from "framer-motion";
+// import { Motion } from "framer-Motion";
 const ProductList = () => {
     return (
         <>
             <div className="ProductList">
                 <Link to="/ProductDetails">
-                    <motion.div
+                    <Motion.div
                         className="Product-List"
                         whileHover={{ scale: 1.05, y: -1 }}
                         transition={{ duration: 0.9 }}
                     >
                         <IoIosHeart className="wishlistIcon" />
                         <div className="watch1Img">
-                            <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                            <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                         </div>
                         <div className="whatchColors">
                             <p className="color1"></p>
@@ -42,16 +42,16 @@ const ProductList = () => {
                             </span>
                             <span className="off">65% off</span>
                         </h5>
-                    </motion.div>
+                    </Motion.div>
                 </Link>
-                <motion.div
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -78,15 +78,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -113,15 +113,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -148,15 +148,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -183,15 +183,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -218,15 +218,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -253,15 +253,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -288,15 +288,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -323,15 +323,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -358,15 +358,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -393,15 +393,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -428,15 +428,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -463,15 +463,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -498,15 +498,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -533,15 +533,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -568,15 +568,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -603,15 +603,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -638,15 +638,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -673,15 +673,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -708,15 +708,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -743,15 +743,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -778,15 +778,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -813,15 +813,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -848,15 +848,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -883,15 +883,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -918,15 +918,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -953,15 +953,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -988,15 +988,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -1023,15 +1023,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -1058,15 +1058,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -1093,15 +1093,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -1128,15 +1128,15 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
-                <motion.div
+                </Motion.div>
+                <Motion.div
                     className="Product-List"
                     whileHover={{ scale: 1.05, y: -1 }}
                     transition={{ duration: 0.9 }}
                 >
                     <IoIosHeart className="wishlistIcon" />
                     <div className="watch1Img">
-                        <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                        <Motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
                     </div>
                     <div className="whatchColors">
                         <p className="color1"></p>
@@ -1163,7 +1163,7 @@ const ProductList = () => {
                         </span>
                         <span className="off">65% off</span>
                     </h5>
-                </motion.div>
+                </Motion.div>
             </div>
         </>
     );

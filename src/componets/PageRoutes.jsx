@@ -17,7 +17,6 @@ const PageRoutes = () => {
   const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
   const Header = lazy(() => import("../componets/common/Header.jsx"));
   const StatusPage = lazy(() => import("./Pages/StatusPage.jsx"));
-
   return (
     <>
       <Suspense>
