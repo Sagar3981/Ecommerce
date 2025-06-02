@@ -19,27 +19,29 @@ const responsive = {
 
 const CarouselComponent = () => {
   return (
-    <div className="carousel-container">
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        autoPlaySpeed={3000}
-        infinite={true}
-        arrows={true}
-        showDots={true}
-      >
-        {images.map((img, idx) => (
-          <div className="carousel-slide" key={idx}>
-            <img
-              src={img}
-              alt={`Slide ${idx + 1}`}
-              className="carousel-image"
-            />
-            <button className="shop-now-btn">Shop Now</button>
-          </div>
-        ))}
-      </Carousel>
-    </div>
+    <>
+      <div className="carousel-container">
+        <Carousel
+          responsive={responsive}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          infinite={true}
+          arrows={true}
+          showDots={true}
+        >
+          {images.map((img, idx) => (
+            <div className="carousel-slide" key={idx}>
+              <img
+                src={img}
+                alt={`Slide ${idx + 1}`}
+                className="carousel-image"
+              />
+              <button className="shop-now-btn">Shop Now</button>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </>
   );
 };
 

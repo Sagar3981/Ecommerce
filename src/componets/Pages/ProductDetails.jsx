@@ -338,10 +338,11 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <Elctronics />
-        <Elctronics />
-        <Elctronics />
+
       </div>
+      <Elctronics />
+      <Elctronics />
+      <Elctronics />
       <Footer />
     </>
   );

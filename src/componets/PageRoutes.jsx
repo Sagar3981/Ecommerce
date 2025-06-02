@@ -15,9 +15,10 @@ const PageRoutes = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/subCategories" element={<SubCategories />} />
           <Route path="/ProductDetails" element={<ProductDetails />} />
           <Route path="/loginpage" element={<Loginpage />} />
-          <Route path="/subCategories" element={<SubCategories />} />
+
         </Routes>
       </Suspense>
     </>

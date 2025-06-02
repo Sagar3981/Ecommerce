@@ -1,7 +1,7 @@
 const Categories = () => {
   return (
     <>
-      <div className="container">
+      <div className="container-fluid CategoriesConFluid">
         <div className="row" style={{ marginTop: "10px" }}>
           <div className="col-sm-12 categories">
             <div className="topcategoriesitemscard">

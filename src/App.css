@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke !important;
+    background-color: rgb(241, 242, 244) !important;
 }
 
 a {
@@ -9,17 +9,17 @@ a {
 
 /* Search input default style */
 .searchcontainer input[type="text"] {
-    border: 1px solid #ccc; /* light grey */
-    border-radius: 4px;
-    padding: 6px 10px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ccc !important; /* light grey */
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    outline: none !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 /* On focus, blue border + subtle shadow */
 .searchcontainer input[type="text"]:focus {
-    border-color: #0d6efd; /* bootstrap primary blue */
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border-color: #0d6efd !important; /* bootstrap primary blue */
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
 }
 
 /* Optional: style for search icon inside searchcontainer */
@@ -80,15 +80,10 @@ a:hover {
 }
 
 .logo {
-    width: 100px;
-    height: 81px;
+    height: 85px;
 }
 .homeicon {
     font-size: 27px;
-}
-
-.container-fluid {
-    box-shadow: 0px 0px 2px;
 }
 .cartbag {
     display: flex;
@@ -96,7 +91,6 @@ a:hover {
     align-items: center;
     gap: 24px;
 }
-
 .hover-or-click:hover .dropdown-menu {
     display: block;
     margin-top: 0.5rem;
@@ -113,10 +107,12 @@ a:hover {
     display: flex;
     justify-content: center !important;
     align-items: center !important;
-    gap: 50px;
+    gap: 75px;
     padding: 15px 15px;
 }
-
+.CategoriesConFluid {
+    width: 98% !important;
+}
 .topcategoriesitemscard {
     display: flex;
     justify-content: center;
@@ -134,15 +130,14 @@ a:hover {
 /* carousel styles  start*/
 
 .carousel-container {
-    width: 80%;
-    margin: 40px auto;
+    width: 98%;
+    margin: 10px auto;
 }
 
 .carousel-image {
     width: 100%;
-    height: 300px;
+    height: 270px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .carousel-title {
@@ -214,14 +209,14 @@ a:hover {
 }
 .emaincard {
     background-color: white;
-    border-radius: 13px;
-    margin: 22px;
+    border-radius: 0px !important;
+    margin: 22px 0px !important;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 11px;
     flex-direction: column;
-    /* box-shadow: 0px 0px 1px; */
+    box-shadow: 0px 0px 0px !important;
 }
 .econtainercard {
     background-color: white;
@@ -246,16 +241,16 @@ a:hover {
 
 .slider-container {
     position: relative;
-    width: 1450px; /* Adjust based on card width * cardsToShow */
+    width: 1480px !important; /* Adjust based on card width * cardsToShow */
     margin: auto;
     overflow: hidden;
-    padding: 10px 40px;
+    padding: 10px 10px;
 }
 
 .card-row {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    /* gap: 20px; */
+    justify-content: space-between;
 }
 
 .econtainercard img {
@@ -1247,6 +1242,7 @@ a:hover {
     width: 18%;
     background-color: white;
     margin: 10px;
+    /* margin-top: 10px; */
 }
 .filter h5 {
     padding: 20px 20px 0px 20px;
@@ -1275,7 +1271,7 @@ hr {
     border: 1px solid rgb(208 208 208) !important;
 }
 .minPrice select {
-    width: 100px;
+    width: 93px;
     border: 1px solid #d8d4d4;
 }
 .HeadphoneType {
@@ -1301,10 +1297,18 @@ hr {
 .BRANDsearch {
     border-bottom: 1px solid gray;
     margin-bottom: 12px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.searchIcon {
+    width: 10px !important;
+    height: 10px !important;
 }
 .BRANDsearch input {
     border: none;
     outline: none;
+    width: 180px;
 }
 .BRANDsearch ::placeholder {
     font-size: 12px;
@@ -1367,12 +1371,14 @@ hr {
 .ProductList {
     width: 80%;
     background-color: white;
+    /* margin: 10px 0px 10px 0px; */
     margin: 10px 10px 10px 0px;
     display: flex;
     flex-wrap: wrap;
 }
 .Product-List {
-    width: 300px;
+    /* width: 310px; */
+    width: 307px;
     padding: 0px 15px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;
 }

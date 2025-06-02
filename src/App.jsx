@@ -5,8 +5,8 @@ import Loginpage from "./componets/LoginPage"
 function App() {
   return (
     <>
-      {/* <PageRoutes /> */}
-      <Loginpage />
+      <PageRoutes />
+      {/* <Loginpage /> */}
     </>
   );
 }

@@ -69,28 +69,37 @@ const Elctronics = () => {
   }
 
   return (
-    <div className="emaincard">
-      <h1 className="section-title">Best Of Electronics</h1>
-      <div className="slider-container">
-        <button className="nav-button left" onClick={prev}>
-          ❮
-        </button>
-        <Link to="/subCategories">
-          <div className="card-row">
-            {visibleCards.map((item, index) => (
-              <div className="econtainercard" key={index}>
-                <img src={item.img} alt={item.heading} />
-                <p>{item.description}</p>
-                <h4>{item.heading}</h4>
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="emaincard">
+              <h1 className="section-title">Best Of Electronics</h1>
+              <div className="slider-container">
+                <button className="nav-button left" onClick={prev}>
+                  ❮
+                </button>
+                <Link to="/subCategories">
+                  <div className="card-row">
+                    {visibleCards.map((item, index) => (
+                      <div className="econtainercard" key={index}>
+                        <img src={item.img} alt={item.heading} />
+                        <p>{item.description}</p>
+                        <h4>{item.heading}</h4>
+                      </div>
+                    ))}
+                  </div>
+                </Link>
+                <button className="nav-button right" onClick={next}>
+                  ❯
+                </button>
               </div>
-            ))}
+            </div>
           </div>
-        </Link>
-        <button className="nav-button right" onClick={next}>
-          ❯
-        </button>
+        </div>
       </div>
-    </div>
+
+    </>
   );
 };
 
