@@ -2330,3 +2330,132 @@ hr {
     border-bottom: 1px solid gray;
     margin-top: 22px;
 }
+/* ####################profile-start#################### */
+.FlipkartCustomer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0px;
+    background-color: white;
+    padding: 15px;
+}
+.profileImg img {
+    width: 50px;
+}
+.helloCustomer h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
+}
+.oders {
+    background-color: white;
+}
+.myOder h2 {
+    font-size: 15px;
+    margin: 0px;
+    color: gray;
+    font-weight: 600;
+    padding: 10px 15px 0px 15px;
+}
+.profileIcon1 {
+    color: rgb(40, 116, 240);
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+.arrowRight {
+    margin-left: 80px;
+    font-size: 20px;
+}
+.myOder1 {
+    padding: 8px 15px 8px 15px;
+}
+.myOder1 p {
+    padding: 0px 25px;
+    margin: 15px;
+}
+.myOder1 h2 {
+    font-size: 15px;
+    margin: 0px;
+    color: gray;
+    font-weight: 600;
+    padding: 0px 0px 10px;
+}
+.oders hr {
+    border: 1px solid rgb(242 238 238) !important;
+}
+.profileRight {
+    background-color: white;
+    margin: 10px 0px 10px;
+}
+.ProfileInformation label {
+    font-size: 20px;
+    margin: 20px 10px;
+}
+.ProfileInformation input {
+    padding: 10px 10px;
+    margin: 0px 30px 0px 10px;
+    width: 250px;
+}
+.ProfileInformation button {
+    background-color: rgb(40, 116, 240);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 150px;
+}
+.edit {
+    color: rgb(40, 116, 240);
+    font-size: 13px;
+    margin-left: 30px;
+}
+.YourGender p {
+    margin: 20px 10px;
+}
+.YourGender label {
+    margin-left: 13px;
+    font-weight: 500;
+}
+.YourGender input {
+    margin: 0px 10px;
+    width: 15px;
+    height: 15px;
+}
+.EmailAddress label {
+    font-size: 20px;
+    margin: 20px 10px;
+}
+.EmailAddress input {
+    padding: 10px 10px;
+    margin: 0px 30px 0px 10px;
+    width: 250px;
+}
+.FAQs {
+    margin: 20px 10px;
+}
+.FAQs h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.FAQs h6 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0px 25px;
+}
+.Deactivate {
+    color: rgb(40, 116, 240);
+    margin: 40px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.Delete {
+    color: red;
+    margin: 10px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.profileSecImg img {
+    width: 100%;
+}
+/* ####################profile-end#################### */
