@@ -34,9 +34,9 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link to="/AllOrders"><a className="dropdown-item" href="#">
                       My Orders
-                    </a>
+                    </a></Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
@@ -74,7 +74,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
 
   );

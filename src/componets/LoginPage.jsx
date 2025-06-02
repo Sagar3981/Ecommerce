@@ -25,9 +25,13 @@ const Loginpage = () => {
                             <br />
                             <input type="text" />
                         </div>
+                        <div className="password">
+                            <label htmlFor="">password</label><br />
+                            <input type="text" />
+                        </div>
                         <p>By continuing, you agree to Flipkart's <span>Terms of Use</span> and <span>Privacy Policy</span>.</p>
                         <div className="otpBtn">
-                            <button>{login ? "Continue" : "Request OTP"}</button>
+                            <button>{login ? "Continue" : "Submit"}</button>
                         </div>
                         {login && <div className="loginBtn">
                             <button onClick={handleOnClick}>Existing User?Login in</button>

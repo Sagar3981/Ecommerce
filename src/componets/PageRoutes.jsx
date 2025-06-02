@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 const PageRoutes = () => {
+
   const Home = lazy(() => import("../componets/Pages/Home.jsx"));
   const Cart = lazy(() => import("../componets/Pages/Cart.jsx"));
   const SubCategories = lazy(() =>

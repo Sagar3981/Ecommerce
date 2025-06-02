@@ -1475,9 +1475,10 @@ hr {
 }
 .email-number label {
     color: gray;
+    margin-top: 20px;
 }
 .email-number {
-    border-bottom: 1px solid rgb(40, 116, 240);
+    border-bottom: 1px solid gray;
 }
 .line1 {
     margin: 0px !important;
@@ -2316,4 +2317,16 @@ hr {
 
 .price-details-row span {
     outline: 1px dotted blue;
+}
+.password label {
+    color: gray;
+}
+.password input {
+    border: none;
+    outline: none;
+    width: 450px;
+}
+.password {
+    border-bottom: 1px solid gray;
+    margin-top: 22px;
 }

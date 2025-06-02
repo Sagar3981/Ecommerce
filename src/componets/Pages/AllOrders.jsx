@@ -1,6 +1,6 @@
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-
+import { Link } from "react-router-dom";
 const AllOrders = () => {
   return (
     <>
@@ -42,7 +42,7 @@ const AllOrders = () => {
 
           {/* Order Card */}
           <div className="order-card">
-            <div className="order-header">
+            <Link to="/OrderDetails"><div className="order-header">
               <img src="/assets/img/a1.webp" alt="Product" />
               <div className="order-details">
                 <div>
@@ -63,6 +63,7 @@ const AllOrders = () => {
                 </div>
               </div>
             </div>
+            </Link>
             <div className="refund-info">
               <p>
                 <strong>Refund Completed</strong> (Refund ID:
