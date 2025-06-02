@@ -27,14 +27,11 @@ const PageRoutes = () => {
           <Route path="/subCategories" element={<SubCategories />} />
           <Route path="/ProductDetails" element={<ProductDetails />} />
           <Route path="/loginpage" element={<Loginpage />} />
-<<<<<<< HEAD
 
-=======
           <Route path="/subCategories" element={<SubCategories />} />
           {/* <Route path="/OrderDetails" element={<OrderDetails />} /> */}
           <Route path="/StatusPage" element={<StatusPage />} />
           <Route path="/AllOrders" element={<AllOrders />} />
->>>>>>> 90503ee019493561a2e377c8c376ca3e26dd6065
         </Routes>
       </Suspense>
     </>
