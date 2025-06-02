@@ -1456,13 +1456,11 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 423px;
+    height: 390px;
 }
+
 .flipkartlogin img {
-    width: 300px;
-}
-.flipkartlogin img {
-    width: 454px;
+    width: 453px;
 }
 .whiteCard {
     width: 550px;
@@ -1518,7 +1516,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: end;
-    height: 43vh;
+    height: 15vh;
     font-size: 15px;
     cursor: pointer;
 }

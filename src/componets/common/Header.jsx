@@ -16,15 +16,17 @@ const Header = () => {
               </div>
 
               <div className="dropdown hover-or-click">
-                <button
-                  className="btn btn-primary dropdown-toggle"
-                  type="button"
-                  id="loginDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i className="bi bi-person me-2"></i> Login
-                </button>
+                <Link to="/loginpage">
+                  <button
+                    className="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="loginDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i className="bi bi-person me-2"></i> Login
+                  </button>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="loginDropdown">
                   <li>
                     <a className="dropdown-item" href="#">

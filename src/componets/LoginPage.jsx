@@ -5,6 +5,9 @@ const Loginpage = () => {
     const handleClick = () => {
         setLogin(true)
     }
+    const handleOnClick = () => {
+        setLogin(false)
+    }
     return (
         <>
             <div className="loginCard">
@@ -27,7 +30,7 @@ const Loginpage = () => {
                             <button>{login ? "Continue" : "Request OTP"}</button>
                         </div>
                         {login && <div className="loginBtn">
-                            <button>Existing User?Login in</button>
+                            <button onClick={handleOnClick}>Existing User?Login in</button>
                         </div>}
                         {!login && <div>
                             <h6 onClick={handleClick}>New to Flipkart? Create an account</h6>
