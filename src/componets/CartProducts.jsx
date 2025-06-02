@@ -1,5 +1,6 @@
 import { MdVerifiedUser } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CartProducts = () => {
   const navigate = useNavigate();
@@ -213,7 +214,9 @@ const CartProducts = () => {
             </div>
           </div>
           <div className="place-order">
-            <button onClick={() => navigate("/checkout")}>place order</button>
+            <Link to="/checkout">
+              <button >place order</button>
+            </Link>
           </div>
         </div>
         <div className="price-container">

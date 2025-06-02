@@ -39,7 +39,10 @@ a {
 a:hover {
     text-decoration: none !important;
 }
-
+.cartIcon {
+    width: 28px;
+    height: 28px;
+}
 .headercard {
     /* margin-bottom: 10px; */
     background-color: white;
@@ -653,7 +656,7 @@ flex-direction: column;
 .productDetails-main-container {
     background-color: whitesmoke;
     margin-top: 5px;
-    padding: 0px 150px;
+    padding: 0px;
 }
 
 .productDetails-constainer {

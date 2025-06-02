@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Header = () => {
   return (
@@ -60,7 +61,7 @@ const Header = () => {
 
                 <div className="cart-wrapper">
                   <Link to="/cart">
-                    <i className="bi bi-cart homeicon"></i>
+                    <FaCartShopping className="cartIcon" />
                   </Link>
                   <span className="cart-badge">3</span>{" "}
                   {/* dynamic count goes here */}

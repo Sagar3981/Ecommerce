@@ -15,23 +15,22 @@ const PageRoutes = () => {
   const CheckOut = lazy(() => import("./Pages/CheckOut.jsx"));
   const PaymentPage = lazy(() => import("./Pages/PaymentPage.jsx"));
   const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
-  const Header = lazy(() => import("../componets/common/Header.jsx"));
   const StatusPage = lazy(() => import("./Pages/StatusPage.jsx"));
   return (
     <>
       <Suspense>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Header" element={"<Header/>"} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/subCategories" element={<SubCategories />} />
           <Route path="/ProductDetails" element={<ProductDetails />} />
           <Route path="/loginpage" element={<Loginpage />} />
-
+          <Route path="/PaymentPage" element={<PaymentPage />} />
           <Route path="/subCategories" element={<SubCategories />} />
-          {/* <Route path="/OrderDetails" element={<OrderDetails />} /> */}
+          <Route path="/checkout" element={<CheckOut />} />
           <Route path="/StatusPage" element={<StatusPage />} />
           <Route path="/AllOrders" element={<AllOrders />} />
+          <Route path="/OrderDetails" element={<OrderDetails />} />
         </Routes>
       </Suspense>
     </>
