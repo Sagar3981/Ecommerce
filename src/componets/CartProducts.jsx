@@ -1,9 +1,8 @@
 import { MdVerifiedUser } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const CartProducts = () => {
-  const navigate = useNavigate();
+
   return (
     <>
       <div className="total-div">
