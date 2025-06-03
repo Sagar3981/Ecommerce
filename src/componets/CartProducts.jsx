@@ -42,7 +42,7 @@ const CartProducts = () => {
               <div className="cart-product-buttons">
                 <div className="quantity-of-product">
                   <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" value={1} />
+                  <input className="quantity-input" type="text" />
                   <button className="plus-button">+</button>
                 </div>
                 <div className="save-remove">
@@ -82,7 +82,7 @@ const CartProducts = () => {
               <div className="cart-product-buttons">
                 <div className="quantity-of-product">
                   <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" value={1} />
+                  <input className="quantity-input" type="text" />
                   <button className="plus-button">+</button>
                 </div>
                 <div className="save-remove">
@@ -122,7 +122,7 @@ const CartProducts = () => {
               <div className="cart-product-buttons">
                 <div className="quantity-of-product">
                   <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" value={1} />
+                  <input className="quantity-input" type="text" />
                   <button className="plus-button">+</button>
                 </div>
                 <div className="save-remove">
@@ -162,7 +162,7 @@ const CartProducts = () => {
               <div className="cart-product-buttons">
                 <div className="quantity-of-product">
                   <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" value={1} />
+                  <input className="quantity-input" type="text" />
                   <button className="plus-button">+</button>
                 </div>
                 <div className="save-remove">
@@ -202,7 +202,7 @@ const CartProducts = () => {
               <div className="cart-product-buttons">
                 <div className="quantity-of-product">
                   <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" value={1} />
+                  <input className="quantity-input" type="text" />
                   <button className="plus-button">+</button>
                 </div>
                 <div className="save-remove">

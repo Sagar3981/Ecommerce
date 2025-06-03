@@ -3,10 +3,9 @@ import { FaBell } from "react-icons/fa";
 import { IoMdStar } from "react-icons/io";
 import { IoMdLocate } from "react-icons/io";
 import { MdVerifiedUser } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CheckOutDetails = () => {
-    const navigate = useNavigate()
     return(
         <>
         <div className="checkout-main-container">
@@ -139,8 +138,9 @@ const CheckOutDetails = () => {
         
                     <h1>Order confirmation email will be sent to <span><input type="email" placeholder="Enter your email" /></span></h1>
 
-                    <button onClick={() => navigate("/payment-page")} className="order-summary-button">continue</button>
-                
+                    <Link to="/PaymentPage">
+                    <button className="order-summary-button">continue</button>
+                    </Link>
 
                 </div>
                     </div>
