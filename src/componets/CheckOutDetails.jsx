@@ -152,7 +152,7 @@ const CheckOutDetails = () => {
             </div>
             <div className="checkout-price">
                 <div className="checkout-price-container">
-            <div className="price-details">
+            <div className="cart-price-details">
                 <h1>price details</h1>
                 <hr />
             </div>

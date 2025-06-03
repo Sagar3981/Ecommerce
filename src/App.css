@@ -1055,13 +1055,13 @@ flex-direction: column;
     top: 0px;
 }
 
-.price-details {
+.cart-price-details{
     background-color: white;
     width: 350px;
     height: 45px;
 }
 
-.price-details h1 {
+.cart-price-details h1 {
     padding-top: 10px;
     text-align: center;
     text-transform: uppercase;
@@ -1070,7 +1070,7 @@ flex-direction: column;
     color: #616161;
 }
 
-.price-details hr {
+.cart-price-details hr {
     margin: 5px;
 }
 
