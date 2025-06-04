@@ -13,7 +13,6 @@ const Header = () => {
               <input type="text" placeholder="Serach your product here " />
               <i className="bi bi-search"></i>
             </div>
-git
             <div className="dropdown hover-or-click">
               <button
                 className="btn btn-primary dropdown-toggle"
