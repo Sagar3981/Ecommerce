@@ -1,18 +1,19 @@
-const CartHeader = () =>{
-    return(
-        <>
-        <div className="container-fluid">
-      <div className="row">
-        <div className="col-sm-12 cart-headercard">
-          <img src="assets/img/logo.png" alt="Logo" className="logo" />
-          <div className="searchcard">
-            <i className="bi bi-house homeicon"></i>
-            <div className="searchcontainer">
-              <input type="text" placeholder="Serach your product here " />
-              <i className="bi bi-search"></i>
+import { Link } from "react-router-dom"
+const CartHeader = () => {
+  return (
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12 cart-headercard">
+            <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            <div className="searchcard">
+              <i className="bi bi-house homeicon"></i>
+              <div className="searchcontainer">
+                <input type="text" placeholder="Serach your product here " />
+                <i className="bi bi-search"></i>
+              </div>
             </div>
-          </div>
-          <div className="dropdown hover-or-click">
+            <div className="dropdown hover-or-click">
               <button
                 className="btn btn-primary dropdown-toggle"
                 type="button"
@@ -24,9 +25,9 @@ const CartHeader = () =>{
               </button>
               <ul className="dropdown-menu" aria-labelledby="loginDropdown">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link to="/profile"><a className="dropdown-item" href="#">
                     My Profile
-                  </a>
+                  </a></Link>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
@@ -53,11 +54,11 @@ const CartHeader = () =>{
                 </li>
               </ul>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-        </>
-    )
+    </>
+  )
 }
 
 export default CartHeader
