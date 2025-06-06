@@ -2884,3 +2884,67 @@ hr {
     width: 100%;
 }
 /* ####################profile-end#################### */
+
+/*/###### checkout page changes ####### */
+.login-change-div{
+    width: 800px;
+    background-color: white;
+    height: 100px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.login-change-div1{
+  display: flex;
+}
+
+.login-change-div-serial-number{
+    color: #2874f0;
+    background-color: #f0f0f0;
+    width: 25px;
+    font-size: 18px;
+    height: 25px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.login-change-div-data h1{
+    color: #878787;
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.login-change-div-data p{
+    font-size: 14px;
+}
+
+.login-change-div-button{
+    height: 40px;
+    width: 115px;
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+    color: #2874f0;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.selected-login-change-div{
+  display: none;
+}
+
+.selected-address-div{
+  display: none;
+}
+
+.selected-order-summary{
+  display: none;
+}
+
+/*/###### checkout page changes ####### */
