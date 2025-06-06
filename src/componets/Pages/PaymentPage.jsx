@@ -7,8 +7,9 @@ const PaymentPage = () => {
         <>
         <CheckOutHeader/>
         <PaymentDetails/>
+
         
-        
+
         </>
     )
 }

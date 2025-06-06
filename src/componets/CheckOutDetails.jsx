@@ -3,14 +3,35 @@ import { FaBell } from "react-icons/fa";
 import { IoMdStar } from "react-icons/io";
 import { IoMdLocate } from "react-icons/io";
 import { MdVerifiedUser } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const CheckOutDetails = () => {
-    const navigate = useNavigate()
+
+    const [sectionChange,setsectionChange] = useState("address")
+
+     const handleSectionChange = (e) => {
+    setsectionChange(e);
+  };
+  
     return(
         <>
         <div className="checkout-main-container">
             <div className="checkout-deatils">
+                <div className={`login-change-div ${sectionChange === "login" ?  "selected-login-change-div" : ""}`}>
+                    <div className="login-change-div1">
+                        <p className="login-change-div-serial-number">1</p>
+                        <div className="login-change-div-data">
+                            <h1>login</h1>
+                            <p>+919381747181</p>
+                        </div>
+                    </div>
+                    <div className="login-change-div2">
+                        <button onClick={() => handleSectionChange("login")} className="login-change-div-button">change</button>
+                    </div>
+
+                </div>
+                {sectionChange === "login" && (
                 <div className="checkout-login">
                     <div className="checkout-titles">
                         <p className="checkout-serial">1</p>
@@ -20,7 +41,7 @@ const CheckOutDetails = () => {
                         <div className="checkout-login-div1">
                             <p className="phone-number"><span>phone</span>+919985673258</p>
                             <h1 className="check-out-log-sign">Logout & Signup in another account</h1>
-                            <button className="continue-checkout-button">continue checkout</button>
+                            <button  onClick={() => handleSectionChange("address")} className="continue-checkout-button">continue checkout</button>
                         </div>
 
                         <div className="checkout-login-div2">
@@ -34,7 +55,23 @@ const CheckOutDetails = () => {
                             <p>Please note that upon clicking "Logout" you will loose all items in the cart and will be redirected to the Flipcart home page.</p>
                     </div>
                 </div>
-                <div className="checkout-address">
+                )}
+
+                <div className={`login-change-div ${sectionChange === "address" ? "selected-address-div" : ""}`}>
+                    <div className="login-change-div1">
+                        <p className="login-change-div-serial-number">2</p>
+                        <div className="login-change-div-data">
+                            <h1>delivery address</h1>
+                            <p>kakinada</p>
+                        </div>
+                    </div>
+                    <div className="login-change-div2">
+                        <button onClick={() => handleSectionChange("address")} className="login-change-div-button">change</button>
+                    </div>
+
+                </div>
+                {sectionChange === "address" && (
+                <div className={`checkout-address ${sectionChange === "summary" ? "selected-checkout-address" : ""}`}  >
                     <div className="checkout-titles">
                         <p className="checkout-serial">2</p>
                         <h1 className="checkout-headings">delivery address</h1>
@@ -85,13 +122,27 @@ const CheckOutDetails = () => {
                                 <h1 className="checkoutdelivery-time"><span><input type="radio"/></span>home (all every day)</h1>
                                  <h1 className="checkoutdelivery-time"><span><input type="radio"/></span>work (delivery between 10am - 5pm)</h1>
                             </div>
-                            <button className="checkout-address-button">save and deliver here</button>
+                            <button onClick={() => handleSectionChange("summary")} className="checkout-address-button">save and deliver here</button>
                         </div>
 
 
                     </div>
 
                 </div>
+                )}
+                
+                <div className={`login-change-div ${sectionChange === "summary" ? "selected-order-summary" : ""}`} >
+                    <div className="login-change-div1">
+                        <p className="login-change-div-serial-number">3</p>
+                        <div className="login-change-div-data">
+                            <h1>order summary</h1>
+                        </div>
+                    </div>
+                    <div className="login-change-div2">
+                    </div>
+
+                </div>
+                {sectionChange === "summary" && (
                 <div className="checkout-order-summary">
                     <div className="checkout-titles">
                         <p className="checkout-serial">3</p>
@@ -136,19 +187,18 @@ const CheckOutDetails = () => {
                         <h1><span><input type="checkbox" /></span>use GST invoice</h1>
                     </div>
                     <div className="order-confirm-email">
-        
-                    <h1>Order confirmation email will be sent to <span><input type="email" placeholder="Enter your email" /></span></h1>
 
-                    <button onClick={() => navigate("/payment-page")} className="order-summary-button">continue</button>
-                
+                    <h1>Order confirmation email will be sent to <span><input type="email" placeholder="Enter your email" /></span></h1>
+                    <Link to="/payment-page">
+                    <button  className="order-summary-button">continue</button>
+                    </Link>
 
                 </div>
                     </div>
 
                 </div>
+                )}
                 
-
-
             </div>
             <div className="checkout-price">
                 <div className="checkout-price-container">
