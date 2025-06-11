@@ -1,13 +1,38 @@
 import { useState } from "react"
+import BackEndApi from "../Utils/httpclint.js"
 
 const Loginpage = () => {
     const [login, setLogin] = useState(false)
-    const handleClick = () => {
+    const [signInput,setSignInput] = useState({})
+const handleUserInput =(event)=>{
+        setSignInput({ ...signInput, [event.target.name]: event.target.value });
+
+    }
+   
+
+    const handleClick = async() => {
+
         setLogin(true)
+        
     }
     const handleOnClick = () => {
         setLogin(false)
     }
+
+     const handleUserClick = async() =>{
+    try{
+        const endPoint=login?"/createUser":"/userLogin"
+    const Response = await BackEndApi.post(endPoint,signInput)
+    console.log(Response)
+    const {token}=Response.data.data
+    localStorage.setItem("authToken",token)
+    }
+    catch (error){
+     console.log(error)
+  }
+    
+    }
+  
     return (
         <>
             <div className="loginCard">
@@ -23,15 +48,15 @@ const Loginpage = () => {
                         <div className="email-number">
                             <label htmlFor="">{login ? "Enter Email" : "Enter Email/Phone Number"}</label>
                             <br />
-                            <input type="text" />
+                            <input type="text" name="email" onChange={handleUserInput}/>
                         </div>
                         <div className="password">
                             <label htmlFor="">password</label><br />
-                            <input type="text" />
+                            <input type="text" name="password"  onChange={handleUserInput}/>
                         </div>
                         <p>By continuing, you agree to Flipkart's <span>Terms of Use</span> and <span>Privacy Policy</span>.</p>
                         <div className="otpBtn">
-                            <button>{login ? "Continue" : "Submit"}</button>
+                            <button onClick={handleUserClick} id="btn" value={login ? "Continue" : "Submit"}>{login ? "Continue" : "Submit"}</button>
                         </div>
                         {login && <div className="loginBtn">
                             <button onClick={handleOnClick}>Existing User?Login in</button>
