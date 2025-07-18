@@ -74,7 +74,7 @@ const Elctronics = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="emaincard">
-              <h1 className="section-title">Best Of Electronics</h1>
+              <h1 className="section-title">Best Deals on Electronics</h1>
               <div className="slider-container">
                 <button className="nav-button left" onClick={prev}>
                   ❮
@@ -98,7 +98,6 @@ const Elctronics = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

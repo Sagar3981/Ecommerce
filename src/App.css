@@ -2952,3 +2952,9 @@ hr {
 }
 
 /*/###### checkout page changes ####### */
+
+.section-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 15px;
+}
