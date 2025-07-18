@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 const PageRoutes = () => {
-
   const Home = lazy(() => import("../componets/Pages/Home.jsx"));
   const Cart = lazy(() => import("../componets/Pages/Cart.jsx"));
   const SubCategories = lazy(() =>
@@ -17,7 +16,7 @@ const PageRoutes = () => {
   const StatusPage = lazy(() => import("./Pages/StatusPage.jsx"));
   const AllOrders = lazy(() => import("../componets/Pages/AllOrders.jsx"));
   const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
-  const Profile = lazy(() => import("./Profile.jsx"))
+  const Profile = lazy(() => import("./Profile.jsx"));
   return (
     <>
       <Suspense>
@@ -25,7 +24,7 @@ const PageRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/subCategories" element={<SubCategories />} />
-          <Route path="/productDetails" element={<ProductDetails />} />
+          <Route path="/productDetails/:id" element={<ProductDetails />} />
           <Route path="/loginpage" element={<Loginpage />} />
           <Route path="/PaymentPage" element={<PaymentPage />} />
           <Route path="/checkout" element={<CheckOut />} />
