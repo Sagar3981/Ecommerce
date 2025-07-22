@@ -1,7 +1,37 @@
 import { MdVerifiedUser } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import BackEndApi from "../Utils/httpclint.js";
+import { useState, useEffect } from "react";
 const CartProducts = () => {
+  const [productData, setProductData] = useState([]);
+  const [count, setCount] = useState(1)
+
+  const IncButton = () => {
+    const recount = count + 1
+    setCount(recount)
+    console.log("IncButton", IncButton)
+  }
+  const DecButton = () => {
+    if (count > 1) {
+      setCount(count - 1)
+    }
+
+    console.log("DecButton", DecButton)
+  }
+
+
+  const GetingProduct = async () => {
+    try {
+      const response = await BackEndApi.get("/cart/get-all-CartCollection");
+      setProductData(response.data.data);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    GetingProduct();
+  }, []);
 
   return (
     <>
@@ -12,205 +42,47 @@ const CartProducts = () => {
             <button>enter delivery pincode</button>
           </div>
           <div className="cart-products">
-            <div className="cart-single-product">
-              <div className="cart-product-top-row">
-                <div className="cart-product-image-div">
-                  <img
-                    className="cart-product-image"
-                    src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                  />
-                </div>
-                <div className="cart-product-detils">
-                  <h1 className="cart-product-name">
-                    Veirdo Full Sleeve Printed Men Sweatshirt
-                  </h1>
-                  <h1 className="cart-product-size">Size: L</h1>
-                  <h1 className="cart-product-seller">
-                    Seller:AwesomefabShoppingPvt
-                  </h1>
-                  <div className="cart-product-price">
-                    <p className="product-price">₹2,499</p>
-                    <p className="discount-price">₹599</p>
-                    <p className="discount-off">76%</p>
-                    <p className="availabile-offers">2-offers-available</p>
+            {productData.map((row) => (
+              <div className="cart-single-product">
+                <div className="cart-product-top-row">
+                  <div className="cart-product-image-div">
+                    <img
+                      className="cart-product-image"
+                      src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
+                    />
+                  </div>
+                  <div className="cart-product-detils">
+                    <h1 className="cart-product-name">
+                      {row.productName}+{row.description}
+                    </h1>
+                    <h1 className="cart-product-size">Size: L</h1>
+                    <h1 className="cart-product-seller">
+                      Seller:AwesomefabShoppingPvt
+                    </h1>
+                    <div className="cart-product-price">
+                      <p className="product-price">{row.price}</p>
+                      <p className="discount-price">₹599</p>
+                      <p className="discount-off">76%</p>
+                      <p className="availabile-offers">2-offers-available</p>
+                    </div>
+                  </div>
+                  <div className="delivery-date">
+                    <p>Delivery by Mon Jun 2 </p>
                   </div>
                 </div>
-                <div className="delivery-date">
-                  <p>Delivery by Mon Jun 2 </p>
-                </div>
-              </div>
-              <div className="cart-product-buttons">
-                <div className="quantity-of-product">
-                  <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" />
-                  <button className="plus-button">+</button>
-                </div>
-                <div className="save-remove">
-                  <button>save for later</button>
-                  <button>remove</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="cart-single-product">
-              <div className="cart-product-top-row">
-                <div className="cart-product-image-div">
-                  <img
-                    className="cart-product-image"
-                    src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                  />
-                </div>
-                <div className="cart-product-detils">
-                  <h1 className="cart-product-name">
-                    Veirdo Full Sleeve Printed Men Sweatshirt
-                  </h1>
-                  <h1 className="cart-product-size">Size: L</h1>
-                  <h1 className="cart-product-seller">
-                    Seller:AwesomefabShoppingPvt
-                  </h1>
-                  <div className="cart-product-price">
-                    <p className="product-price">₹2,499</p>
-                    <p className="discount-price">₹599</p>
-                    <p className="discount-off">76%</p>
-                    <p className="availabile-offers">2-offers-available</p>
+                <div className="cart-product-buttons">
+                  <div className="quantity-of-product">
+                    <button className="minus-button" onClick={DecButton}>-</button>
+                    <button className="minus-button" >{count}</button>
+                    <button className="plus-button" onClick={IncButton}>+</button>
                   </div>
-                </div>
-                <div className="delivery-date">
-                  <p>Delivery by Mon Jun 2 </p>
-                </div>
-              </div>
-              <div className="cart-product-buttons">
-                <div className="quantity-of-product">
-                  <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" />
-                  <button className="plus-button">+</button>
-                </div>
-                <div className="save-remove">
-                  <button>save for later</button>
-                  <button>remove</button>
+                  {/* <div className="save-remove">
+                    <button>save for later</button>
+                    <button>remove</button>
+                  </div> */}
                 </div>
               </div>
-            </div>
-
-            <div className="cart-single-product">
-              <div className="cart-product-top-row">
-                <div className="cart-product-image-div">
-                  <img
-                    className="cart-product-image"
-                    src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                  />
-                </div>
-                <div className="cart-product-detils">
-                  <h1 className="cart-product-name">
-                    Veirdo Full Sleeve Printed Men Sweatshirt
-                  </h1>
-                  <h1 className="cart-product-size">Size: L</h1>
-                  <h1 className="cart-product-seller">
-                    Seller:AwesomefabShoppingPvt
-                  </h1>
-                  <div className="cart-product-price">
-                    <p className="product-price">₹2,499</p>
-                    <p className="discount-price">₹599</p>
-                    <p className="discount-off">76%</p>
-                    <p className="availabile-offers">2-offers-available</p>
-                  </div>
-                </div>
-                <div className="delivery-date">
-                  <p>Delivery by Mon Jun 2 </p>
-                </div>
-              </div>
-              <div className="cart-product-buttons">
-                <div className="quantity-of-product">
-                  <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" />
-                  <button className="plus-button">+</button>
-                </div>
-                <div className="save-remove">
-                  <button>save for later</button>
-                  <button>remove</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="cart-single-product">
-              <div className="cart-product-top-row">
-                <div className="cart-product-image-div">
-                  <img
-                    className="cart-product-image"
-                    src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                  />
-                </div>
-                <div className="cart-product-detils">
-                  <h1 className="cart-product-name">
-                    Veirdo Full Sleeve Printed Men Sweatshirt
-                  </h1>
-                  <h1 className="cart-product-size">Size: L</h1>
-                  <h1 className="cart-product-seller">
-                    Seller:AwesomefabShoppingPvt
-                  </h1>
-                  <div className="cart-product-price">
-                    <p className="product-price">₹2,499</p>
-                    <p className="discount-price">₹599</p>
-                    <p className="discount-off">76%</p>
-                    <p className="availabile-offers">2-offers-available</p>
-                  </div>
-                </div>
-                <div className="delivery-date">
-                  <p>Delivery by Mon Jun 2 </p>
-                </div>
-              </div>
-              <div className="cart-product-buttons">
-                <div className="quantity-of-product">
-                  <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" />
-                  <button className="plus-button">+</button>
-                </div>
-                <div className="save-remove">
-                  <button>save for later</button>
-                  <button>remove</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="cart-single-product">
-              <div className="cart-product-top-row">
-                <div className="cart-product-image-div">
-                  <img
-                    className="cart-product-image"
-                    src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                  />
-                </div>
-                <div className="cart-product-detils">
-                  <h1 className="cart-product-name">
-                    Veirdo Full Sleeve Printed Men Sweatshirt
-                  </h1>
-                  <h1 className="cart-product-size">Size: L</h1>
-                  <h1 className="cart-product-seller">
-                    Seller:AwesomefabShoppingPvt
-                  </h1>
-                  <div className="cart-product-price">
-                    <p className="product-price">₹2,499</p>
-                    <p className="discount-price">₹599</p>
-                    <p className="discount-off">76%</p>
-                    <p className="availabile-offers">2-offers-available</p>
-                  </div>
-                </div>
-                <div className="delivery-date">
-                  <p>Delivery by Mon Jun 2 </p>
-                </div>
-              </div>
-              <div className="cart-product-buttons">
-                <div className="quantity-of-product">
-                  <button className="minus-button">-</button>
-                  <input className="quantity-input" type="text" />
-                  <button className="plus-button">+</button>
-                </div>
-                <div className="save-remove">
-                  <button>save for later</button>
-                  <button>remove</button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="place-order">
             <Link to="/checkout">
