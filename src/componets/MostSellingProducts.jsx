@@ -1,22 +1,22 @@
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
-const Elctronics = () => {
+const MostSellingProducts = () => {
   const items = [
     {
-      img: "assets/img/w2.webp",
+      img: "/assets/img/35-306-wrb-sw-twistgo-std-slvr-gry-android-ios-noise-yes-original-imah889ngxq4khs8.webp",
       description: "Best Model watches",
       heading: "Noise",
     },
     {
-      img: "assets/img/a2.webp",
+      img: "assets/img/l-64518810-try-this-original-imahcywfbnhcqrxg.webp",
       description: "Smart Fitness Band",
       heading: "Fitbit",
     },
     {
-      img: "assets/img/a3.webp",
+      img: "assets/img/-original-imah3zvdp7ucukjr.webp",
       description: "High Quality Earbuds",
-      heading: "Sony",
+      heading: "Boat",
     },
     {
       img: "assets/img/e1.webp",
@@ -24,12 +24,12 @@ const Elctronics = () => {
       heading: "Apple Watch",
     },
     {
-      img: "assets/img/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.webp",
-      description: "Wireless Headphones",
-      heading: "Bose",
+      img: "assets/img/b1.avif",
+      description: "Running Shoes for Men",
+      heading: "Nike",
     },
     {
-      img: "assets/img/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.webp",
+      img: "assets/img/b2.avif",
       description: "4K Action Camera",
       heading: "GoPro",
     },
@@ -74,7 +74,7 @@ const Elctronics = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="emaincard">
-              <h1 className="section-title">Best Deals on Electronics</h1>
+              <h1 className="section-title">Most Selling Products</h1>
               <div className="slider-container">
                 <button className="nav-button left" onClick={prev}>
                   ❮
@@ -102,4 +102,4 @@ const Elctronics = () => {
   );
 };
 
-export default Elctronics;
+export default MostSellingProducts;
