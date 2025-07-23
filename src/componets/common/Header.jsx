@@ -28,8 +28,14 @@ const Header = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 headercard">
+<<<<<<< HEAD
             <img src="assets/img/logo.png" alt="Logo" className="logo" />
 
+=======
+            <Link to="/">
+              <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            </Link>
+>>>>>>> 63318f790e0a2d75c2241415543c0895da8edadd
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
