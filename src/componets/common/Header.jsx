@@ -6,9 +6,13 @@ const Header = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12 headercard">
+          <div className="col-sm-12 headercard product-details-header">
             <Link to="/">
-              <img src="assets/img/logo.png" alt="Logo" className="logo" />
+              <img
+                src="/public/assets/img/logo.png"
+                alt="Logo"
+                className="logo"
+              />
             </Link>
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>

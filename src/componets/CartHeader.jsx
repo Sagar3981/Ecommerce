@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 const CartHeader = () => {
   return (
     <>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 cart-headercard">
-            <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            <Link to="/">
+              <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            </Link>
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
@@ -25,9 +27,11 @@ const CartHeader = () => {
               </button>
               <ul className="dropdown-menu" aria-labelledby="loginDropdown">
                 <li>
-                  <Link to="/profile"><a className="dropdown-item" href="#">
-                    My Profile
-                  </a></Link>
+                  <Link to="/profile">
+                    <a className="dropdown-item" href="#">
+                      My Profile
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
@@ -58,7 +62,7 @@ const CartHeader = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CartHeader
+export default CartHeader;

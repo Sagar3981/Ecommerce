@@ -4,44 +4,44 @@ import { Link } from "react-router-dom";
 const MostSellingProducts = () => {
   const items = [
     {
-      img: "/assets/img/35-306-wrb-sw-twistgo-std-slvr-gry-android-ios-noise-yes-original-imah889ngxq4khs8.webp",
+      img: "/public/assets/img/pngwing.com (88).png",
       description: "Best Model watches",
       heading: "Noise",
     },
     {
-      img: "assets/img/l-64518810-try-this-original-imahcywfbnhcqrxg.webp",
+      img: "/public/assets/img/l-64518810-try-this-original-imahcywfbnhcqrxg.webp",
       description: "Smart Fitness Band",
       heading: "Fitbit",
     },
     {
-      img: "assets/img/-original-imah3zvdp7ucukjr.webp",
+      img: "/public/assets/img/-original-imah3zvdp7ucukjr.webp",
       description: "High Quality Earbuds",
       heading: "Boat",
     },
     {
-      img: "assets/img/e1.webp",
+      img: "/public/assets/img/pngwing.com (87).png",
       description: "Latest Smartwatch",
       heading: "Apple Watch",
     },
     {
-      img: "assets/img/b1.avif",
+      img: "/public/assets/img/b1.avif",
       description: "Running Shoes for Men",
       heading: "Nike",
     },
     {
-      img: "assets/img/b2.avif",
-      description: "4K Action Camera",
-      heading: "GoPro",
+      img: "/public/assets/img/vivo-y19.jpg",
+      description: "Titanium Silver, 6GB RAM, 128GB Storage",
+      heading: "VIVO Y19 5G ",
     },
     {
-      img: "assets/img/b3.avif",
+      img: "/public/assets/img/pngwing.com (90).png",
       description: "Gaming Mouse",
       heading: "Logitech",
     },
     {
-      img: "assets/img/e5.webp",
-      description: "Mechanical Keyboard",
-      heading: "Corsair",
+      img: "/public/assets/img/boat-speaker.jpg",
+      description: "Bluetooth Speaker with 10W RMS Stereo Sound",
+      heading: "Boat",
     },
   ];
 

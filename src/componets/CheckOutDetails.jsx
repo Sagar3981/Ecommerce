@@ -207,13 +207,13 @@ const CheckOutDetails = () => {
                   <div className="radio-choice">
                     <h1 className="checkoutdelivery-time">
                       <span>
-                        <input type="radio" />
+                        <input type="radio" name="address" />
                       </span>
                       home (all every day)
                     </h1>
                     <h1 className="checkoutdelivery-time">
                       <span>
-                        <input type="radio" />
+                        <input type="radio" name="address" />
                       </span>
                       work (delivery between 10am - 5pm)
                     </h1>

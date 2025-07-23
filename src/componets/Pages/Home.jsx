@@ -4,6 +4,7 @@ import Elctronics from "../Elctronics";
 import Categories from "../Categories";
 import Footer from "../common/Footer";
 import MostSellingProducts from "../MostSellingProducts.jsx";
+import DiscountOnProducts from "../DiscountOnProducts.jsx";
 const Home = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Home = () => {
       <CarouselComponent />
       <Elctronics />
       <MostSellingProducts />
-      <Elctronics />
+      <DiscountOnProducts />
       <Footer />
     </>
   );

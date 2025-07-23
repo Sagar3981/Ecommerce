@@ -1,42 +1,47 @@
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
-const Elctronics = () => {
+const DiscountOnProducts = () => {
   const items = [
     {
-      img: "/public/assets/img/HP-15-laptop.jpg",
-      description: "AMD Ryzen 3 7320U (8GB LPDDR5, 512GB SSD) ",
-      heading: "HP 15",
+      img: "/public/assets/img/realme-8.jpg",
+      description: "Cyber Black, 8GB RAM,128GB Storage",
+      heading: "Realme 8",
     },
     {
-      img: "/public/assets/img/Qled-tv.jpg",
-      description: " (43 inches) OptimaX Series Full HD",
-      heading: "QLED Android TV ",
+      img: "/public/assets/img/redmi-a4.jpg",
+      description: "Starry Black, 4GB RAM, 64GB Storage",
+      heading: "Redmi A4 5G",
     },
     {
-      img: "/public/assets/img/boult-earpods.jpg",
-      description: " Truly Wireless in Ear Earbuds with 35H Playtime",
-      heading: "Boult W20",
+      img: "/public/assets/img/galaxy-m05.jpg",
+      description: "Mint Green, 4GB RAM, 64 GB Storage",
+      heading: "Samsung Galaxy M05",
     },
     {
-      img: "/public/assets/img/pngwing.com (91).png",
-      description: "1.96 AMOLED Display, Premium Metallic Finish(Jet Black)",
-      heading: "Noise",
+      img: "/public/assets/img/one-plus-mobile.jpg",
+      description: "Super Silver, 8GB RAM, 128GB Storage",
+      heading: "OnePlus Nord CE4 Lite 5G",
     },
     {
-      img: "assets/img/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.webp",
-      description: "Wireless Headphones",
-      heading: "Bose",
+      img: "/public/assets/img/iqoo-mobile.jpg",
+      description: "Titanium, 6GB RAM, 128GB Storage",
+      heading: "iQOO Z10x 5G",
     },
     {
-      img: "/public/assets/img/pngwing.com (90).png",
-      description: "Gaming Mouse",
-      heading: "Logitech",
+      img: "/public/assets/img/vivo-y19.jpg",
+      description: "Titanium Silver, 6GB RAM, 128GB Storage",
+      heading: "VIVO Y19 5G ",
     },
     {
-      img: "/public/assets/img/boat-speaker.jpg",
-      description: "Bluetooth Speaker with 10W RMS Stereo Sound",
-      heading: "Boat",
+      img: "/public/assets/img/redmi-13.jpg",
+      description: "awaiian Blue, 6GB+128GB",
+      heading: "Redmi 13 5G",
+    },
+    {
+      img: "/public/assets/img/poco-c75.jpg",
+      description: "Enchanted Green (4GB, 64GB)",
+      heading: "POCO C75 5G",
     },
   ];
 
@@ -69,7 +74,7 @@ const Elctronics = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="emaincard">
-              <h1 className="section-title">Best Deals on Electronics</h1>
+              <h1 className="section-title">Upto 15% off ON Mobiles</h1>
               <div className="slider-container">
                 <button className="nav-button left" onClick={prev}>
                   ❮
@@ -78,7 +83,11 @@ const Elctronics = () => {
                   <div className="card-row">
                     {visibleCards.map((item, index) => (
                       <div className="econtainercard" key={index}>
-                        <img src={item.img} alt={item.heading} />
+                        <img
+                          className="discount-image"
+                          src={item.img}
+                          alt={item.heading}
+                        />
                         <p>{item.description}</p>
                         <h4>{item.heading}</h4>
                       </div>
@@ -97,4 +106,4 @@ const Elctronics = () => {
   );
 };
 
-export default Elctronics;
+export default DiscountOnProducts;
