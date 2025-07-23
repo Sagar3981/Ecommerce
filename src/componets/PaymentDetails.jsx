@@ -78,9 +78,8 @@ const PaymentDetails = () => {
             <div className="complete-payment-method">
               <div className="complete-payment-method-div1">
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "upi" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "upi" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("upi")}
                 >
                   <div className="payment-upi">
@@ -93,9 +92,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "card" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "card" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("card")}
                 >
                   <div className="payment-upi">
@@ -113,9 +111,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "netbanking" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "netbanking" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("netbanking")}
                 >
                   <div className="payment-upi">
@@ -125,9 +122,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "cod" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "cod" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("cod")}
                 >
                   <div className="payment-upi">
@@ -137,9 +133,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "giftcard" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "giftcard" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("giftcard")}
                 >
                   <div className="payment-upi">
