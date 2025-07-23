@@ -6,7 +6,7 @@ import { MdVerifiedUser } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BackEndApi from "../Utils/httpclint.js";
-import { div } from "framer-motion/client";
+
 
 const CheckOutDetails = () => {
     const [sectionChange, setsectionChange] = useState("address")
@@ -45,10 +45,16 @@ const CheckOutDetails = () => {
             setProductData(updatedData);
         }
     };
-    const handleRemove = (index) => {
-        const updatedData = productData.filter((_, i) => i !== index);
-        setProductData(updatedData);
+    const handleRemove = async (id) => {
+        // alert(id);
+        try {
+            const response = await BackEndApi.delete(`/cart/delete-cart-item/${id}`);
+            console.log(response);
+        } catch (error) {
+            console.log("Delete Error:", error.response?.data || error.message);
+        }
     };
+
 
     const formatCurrency = (amount) => `₹${amount.toFixed(2)}`;
 
@@ -247,7 +253,7 @@ const CheckOutDetails = () => {
                                                     </div>
                                                     <div className="save-remove">
                                                         <button>save for later</button>
-                                                        <button onClick={() => handleRemove(index)}>remove</button>
+                                                        <button onClick={() => handleRemove(row._id)}>remove</button>
                                                     </div>
                                                 </div>
                                             </div>

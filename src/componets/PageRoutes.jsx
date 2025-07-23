@@ -17,6 +17,7 @@ const PageRoutes = () => {
   const AllOrders = lazy(() => import("../componets/Pages/AllOrders.jsx"));
   const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
   const Profile = lazy(() => import("./Profile.jsx"));
+  const AllSubCategories = lazy(() => import("../componets/Pages/allSubCategories.jsx"));
   return (
     <>
       <Suspense>
@@ -32,6 +33,7 @@ const PageRoutes = () => {
           <Route path="/AllOrders" element={<AllOrders />} />
           <Route path="/OrderDetails" element={<OrderDetails />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/allSubCategories" element={<AllSubCategories />} />
         </Routes>
       </Suspense>
     </>

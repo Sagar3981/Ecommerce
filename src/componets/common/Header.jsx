@@ -1,17 +1,39 @@
 import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import BackEndApi from "../../Utils/httpclint";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [productData, setProductData] = useState([]);
+
+  const GetingProduct = async () => {
+    try {
+      const response = await BackEndApi.get("/cart/get-all-CartCollection");
+      const withQuantity = response.data.data.map((item) => ({
+        ...item,
+        quantity: item.quantity || 1,
+      }));
+      setProductData(withQuantity);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    GetingProduct();
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 headercard">
             <img src="assets/img/logo.png" alt="Logo" className="logo" />
+
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
-                <input type="text" placeholder="Serach your product here " />
+                <input type="text" placeholder="Search your product here" />
                 <i className="bi bi-search"></i>
               </div>
 
@@ -34,9 +56,11 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <Link to="/AllOrders"><a className="dropdown-item" href="#">
-                      My Orders
-                    </a></Link>
+                    <Link to="/AllOrders">
+                      <a className="dropdown-item" href="#">
+                        My Orders
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
@@ -65,18 +89,14 @@ const Header = () => {
                   <Link to="/cart">
                     <FaCartShopping className="cartIcon" />
                   </Link>
-                  <span className="cart-badge">3</span>{" "}
-                  {/* dynamic count goes here */}
+                  <span className="cart-badge">{productData.length}</span>
                 </div>
-
-                {/* <i className="bi bi-bag-check homeicon"></i> */}
               </div>
             </div>
           </div>
         </div>
-      </div >
+      </div>
     </>
-
   );
 };
 
