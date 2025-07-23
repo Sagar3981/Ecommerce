@@ -10,6 +10,8 @@ import { CiWallet } from "react-icons/ci";
 import { CiCreditCard1 } from "react-icons/ci";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BackEndApi from "../Utils/httpclint";
+import { useEffect } from "react";
 
 const PaymentDetails = () => {
   const [paymentMethod, setPaymentMethod] = useState("upi");
@@ -38,9 +40,6 @@ const PaymentDetails = () => {
     }, 2000);
   };
 
-  const oderClick = () => {
-    console.log("clicked");
-  };
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/cart/get-all-CartCollection");
