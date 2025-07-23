@@ -3073,3 +3073,37 @@ hr {
     transform: translateY(0);
   }
 }
+.AllSubCategories {
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.allPhones {
+    background-color: rgb(224 224 240);
+    padding-top: 50px;
+    width: 240px;
+    /* height: 270px; */
+    border-radius: 110px 110px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.allPhones img {
+    width: 200px;
+    height: 200px;
+}
+.allphoneName {
+    text-align: center;
+    font-size: 18px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 240px;
+    margin: 15px 0px 0px;
+}

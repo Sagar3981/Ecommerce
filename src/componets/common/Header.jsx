@@ -1,12 +1,41 @@
 import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import BackEndApi from "../../Utils/httpclint";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [productData, setProductData] = useState([]);
+
+  const GetingProduct = async () => {
+    try {
+      const response = await BackEndApi.get("/cart/get-all-CartCollection");
+      const withQuantity = response.data.data.map((item) => ({
+        ...item,
+        quantity: item.quantity || 1,
+      }));
+      setProductData(withQuantity);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    GetingProduct();
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
         <div className="row">
+<<<<<<< HEAD
           <div className="col-sm-12 headercard product-details-header">
+=======
+          <div className="col-sm-12 headercard">
+<<<<<<< HEAD
+            <img src="assets/img/logo.png" alt="Logo" className="logo" />
+
+=======
+>>>>>>> d7dbf90dd3e5eb89b2c44daa498c59fd635b8375
             <Link to="/">
               <img
                 src="/public/assets/img/logo.png"
@@ -14,10 +43,11 @@ const Header = () => {
                 className="logo"
               />
             </Link>
+>>>>>>> 63318f790e0a2d75c2241415543c0895da8edadd
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
-                <input type="text" placeholder="Serach your product here " />
+                <input type="text" placeholder="Search your product here" />
                 <i className="bi bi-search"></i>
               </div>
 
@@ -73,11 +103,8 @@ const Header = () => {
                   <Link to="/cart">
                     <FaCartShopping className="cartIcon" />
                   </Link>
-                  <span className="cart-badge">3</span>{" "}
-                  {/* dynamic count goes here */}
+                  <span className="cart-badge">{productData.length}</span>
                 </div>
-
-                {/* <i className="bi bi-bag-check homeicon"></i> */}
               </div>
             </div>
           </div>

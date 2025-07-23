@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const PaymentDetails = () => {
   const [paymentMethod, setPaymentMethod] = useState("upi");
+  const [productData, setProductData] = useState([]);
   const [showAnimation, setShowAnimation] = useState(false);
   const [animationDone, setAnimationDone] = useState(false);
   const navigate = useNavigate();
@@ -37,13 +38,36 @@ const PaymentDetails = () => {
     }, 2000);
   };
 
+  const oderClick = () => {
+    console.log("clicked");
+  };
+  const GetingProduct = async () => {
+    try {
+      const response = await BackEndApi.get("/cart/get-all-CartCollection");
+      const withQuantity = response.data.data.map((item) => ({
+        ...item,
+        quantity: item.quantity || 1,
+      }));
+      setProductData(withQuantity);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    GetingProduct();
+  }, []);
+  const totalPrice = productData.reduce(
+    (acc, item) => acc + (item.price || 0) * (item.quantity || 1),
+    0
+  );
   return (
     <>
       <div className="payment-main-container">
         <div className="complete-payment-div">
           <div className="complete-payment-title">
             <div className="payment-title">
-              <GoArrowLeft className="left-arrow-payment" />
+              {/* <GoArrowLeft className="left-arrow-payment" /> */}
               <h1>complete payment</h1>
             </div>
             <div className="payment-secure">

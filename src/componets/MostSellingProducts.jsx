@@ -79,7 +79,7 @@ const MostSellingProducts = () => {
                 <button className="nav-button left" onClick={prev}>
                   ❮
                 </button>
-                <Link to="/subCategories">
+                <Link to="/allSubCategories">
                   <div className="card-row">
                     {visibleCards.map((item, index) => (
                       <div className="econtainercard" key={index}>
