@@ -544,7 +544,7 @@ flex-direction: column;
 
 .cart-products {
     width: 835px;
-    /* height: 430px; */
+    height: 430px;
     overflow-y: scroll;
 }
 
@@ -569,7 +569,7 @@ flex-direction: column;
 }
 
 .cart-single-product {
-    width: 100%;
+    width: 800;
     height: 200px;
     background-color: white;
     padding: 24px;
@@ -618,6 +618,7 @@ flex-direction: column;
     font-weight: 400;
     color: black;
     text-transform: capitalize;
+    margin: 0;
 }
 
 .cart-product-price {
@@ -1000,11 +1001,13 @@ flex-direction: column;
 .save-remove button {
     border: none;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-left: 25px;
+    padding-left: 39px;
     color: black;
+    font-weight: 600;
+    margin: 6px 0px;
 }
 
 .save-remove button:hover {
@@ -2961,4 +2964,30 @@ hr {
     font-size: 30px;
     font-weight: 600;
     margin: 15px;
+}
+
+.product-sum {
+    width: 835px;
+    height: 430px;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

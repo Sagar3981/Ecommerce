@@ -6,11 +6,14 @@ import Elctronics from "../Elctronics.jsx";
 import Footer from "../common/Footer.jsx";
 import BackEndApi from "../../Utils/httpclint.js";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import MostSellingProducts from "../MostSellingProducts.jsx"
 
 const ProductDetails = () => {
+  const Navigate = useNavigate();
   const [productDetails, setProductDetails] = useState([]);
+  const [cartClick, setCartClick] = useState([]);
   const { id } = useParams();
   const GetProductDetails = async () => {
     try {
@@ -21,7 +24,31 @@ const ProductDetails = () => {
       console.log(error);
     }
   };
+  const addClick = async () => {
+    // e.preventDefault();
+    const payload = {
+      productID: productDetails._id,
+      productName: productDetails.productName,
+      description: productDetails.description,
+      price: productDetails.price,
+      discount: productDetails.discount,
+      discountPrice: productDetails.discountPrice,
+      quantity: 1,
+
+    }
+
+    try {
+      const response = await BackEndApi.post("/cart/add-CartCollection", payload);
+      setCartClick(response.data.data);
+      console.log(response);
+      alert("product saved in  cart successfully");
+      Navigate('/cart');
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
+    // addClick()
     GetProductDetails();
   }, []);
   const images = [
@@ -42,6 +69,7 @@ const ProductDetails = () => {
       <Header />
       {productDetails.productName && (
         <div className="container productDetails-main-container">
+
           <div className="row productDetails-constainer">
             <div className="productDetails-img-container">
               <div className="product-image-wrapper shadow-sm p-3 rounded bg-white position-relative">
@@ -82,19 +110,16 @@ const ProductDetails = () => {
                       key={idx}
                       src={img}
                       alt={`thumb-${idx}`}
-                      className={`thumbnail ${
-                        mainImage === img ? "active" : ""
-                      }`}
+                      className={`thumbnail ${mainImage === img ? "active" : ""
+                        }`}
                       onMouseEnter={() => setMainImage(img)}
                     />
                   ))}
                 </div>
               </div>
               <div className="purchaseAction-row">
-                <button className="custom-cart">
-                  <Link to="/cart">
-                    <FaShoppingCart /> <span>ADD TO CART</span>
-                  </Link>
+                <button className="custom-cart" onClick={addClick}>
+                  <FaShoppingCart /> <span>ADD TO CART</span>
                 </button>
                 <button className="custom-buy">
                   <FaBolt /> <span>BUY NOW</span>
@@ -103,8 +128,8 @@ const ProductDetails = () => {
             </div>
             <div className="productDetails-info-container">
               <div className="product-info-container">
-                <h1 className="product-title">
-                  {productDetails.productName}+{productDetails.description}
+                <h1 className="product-title" name="productname">
+                  {productDetails.productName} +{productDetails.description}
                 </h1>
                 <a href="#" className="review-link">
                   Be the first to Review this product
@@ -114,10 +139,10 @@ const ProductDetails = () => {
 
                 <div className="price-row">
                   <span className="current-price">
-                    {productDetails.discountPrice}
+                    ₹ {productDetails.discountPrice}
                   </span>
-                  <span className="old-price">{productDetails.price}</span>
-                  <span className="discount">{productDetails.discount}</span>
+                  <span className="old-price">₹ {productDetails.price}</span>
+                  <span className="discount">{productDetails.discount}%</span>
                 </div>
 
                 <div className="offers-container">
@@ -361,12 +386,12 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
+
         </div>
       )}
-
-      <Elctronics />
-      <Elctronics />
-      <Elctronics />
+      <MostSellingProducts />
+      {/* <Elctronics />
+      <Elctronics /> */}
       <Footer />
     </>
   );
