@@ -7,7 +7,9 @@ const Header = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 headercard">
-            <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            <Link to="/">
+              <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            </Link>
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
@@ -34,9 +36,11 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <Link to="/AllOrders"><a className="dropdown-item" href="#">
-                      My Orders
-                    </a></Link>
+                    <Link to="/AllOrders">
+                      <a className="dropdown-item" href="#">
+                        My Orders
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
@@ -74,9 +78,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
     </>
-
   );
 };
 
