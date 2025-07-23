@@ -28,7 +28,13 @@ const Header = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 headercard">
-            <img src="assets/img/logo.png" alt="Logo" className="logo" />
+            <Link to="/">
+              <img
+                src="/assets/img/logo.png"
+                alt="Logo"
+                className="logo"
+              />
+            </Link>
 
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
@@ -57,9 +63,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to="/AllOrders">
-                      <a className="dropdown-item" href="#">
-                        My Orders
-                      </a>
+                      <span className="dropdown-item">My Orders</span>
                     </Link>
                   </li>
                   <li>
@@ -79,18 +83,16 @@ const Header = () => {
               </div>
             </div>
 
-            <div>
-              <div className="cartbag">
-                <button className="btn btn-success">
-                  <i className="bi bi-shop me-2"></i> Become a Seller
-                </button>
+            <div className="cartbag">
+              <button className="btn btn-success">
+                <i className="bi bi-shop me-2"></i> Become a Seller
+              </button>
 
-                <div className="cart-wrapper">
-                  <Link to="/cart">
-                    <FaCartShopping className="cartIcon" />
-                  </Link>
-                  <span className="cart-badge">{productData.length}</span>
-                </div>
+              <div className="cart-wrapper">
+                <Link to="/cart">
+                  <FaCartShopping className="cartIcon" />
+                </Link>
+                <span className="cart-badge">{productData.length}</span>
               </div>
             </div>
           </div>

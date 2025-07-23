@@ -8,19 +8,41 @@ import { HiOutlineGiftTop } from "react-icons/hi2";
 import { TbSquarePercentage } from "react-icons/tb";
 import { CiWallet } from "react-icons/ci";
 import { CiCreditCard1 } from "react-icons/ci";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BackEndApi from "../Utils/httpclint";
+import { useEffect } from "react";
 
 const PaymentDetails = () => {
   const [paymentMethod, setPaymentMethod] = useState("upi");
   const [productData, setProductData] = useState([]);
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [animationDone, setAnimationDone] = useState(false);
+  const navigate = useNavigate();
 
   const handlePaymentMethodChange = (method) => {
     setPaymentMethod(method);
   };
+
+  const handlePay = () => {
+    setShowAnimation(true);
+
+    // Show truck for 2 seconds
+    setTimeout(() => {
+      setAnimationDone(true);
+
+      // Wait 5 seconds after checkmark appears
+      setTimeout(() => {
+        setShowAnimation(false);
+        setAnimationDone(false);
+        navigate("/");
+      }, 5000);
+    }, 2000);
+  };
+
   const oderClick = () => {
-    console.log("clicked")
-  }
+    console.log("clicked");
+  };
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/cart/get-all-CartCollection");
@@ -85,7 +107,6 @@ const PaymentDetails = () => {
                     <p className="upi-text">
                       Add and secure cards as per RBI guidelines
                     </p>
-
                     <p className="axis-card-discount">
                       5% unlimited cash back on flipkart axis bank credit card
                     </p>
@@ -130,12 +151,8 @@ const PaymentDetails = () => {
                   onClick={() => handlePaymentMethodChange("emi")}
                 >
                   <div className="payment-upi">
-                    <span>
-                      <TbSquarePercentage className="upi-icon" />
-                    </span>
-                    <h1>
-                      <span>emi</span>
-                    </h1>
+                    <TbSquarePercentage className="upi-icon" />
+                    <h1>emi</h1>
                   </div>
                 </div>
                 <hr className="payment-hr" />
@@ -144,17 +161,14 @@ const PaymentDetails = () => {
                   onClick={() => handlePaymentMethodChange("wallet")}
                 >
                   <div className="payment-upi">
-                    <span>
-                      <CiWallet className="upi-icon" />
-                    </span>
-                    <h1>
-                      <span>wallet</span>
-                    </h1>
+                    <CiWallet className="upi-icon" />
+                    <h1>wallet</h1>
                   </div>
                 </div>
               </div>
 
               <div className="complete-payment-method-div2">
+                {/* UPI Method */}
                 {paymentMethod === "upi" && (
                   <div className="upi-method">
                     <div className="upi-method-div1">
@@ -172,11 +186,12 @@ const PaymentDetails = () => {
                       <button>verify</button>
                     </div>
                     <div className="upi-method-div3">
-                      <button>pay</button>
+                      <button onClick={handlePay}>pay</button>
                     </div>
                   </div>
                 )}
 
+                {/* Card Method */}
                 {paymentMethod === "card" && (
                   <div className="debit-card-method">
                     <div className="card-method-div1">
@@ -194,30 +209,20 @@ const PaymentDetails = () => {
                     <div className="card-method-div2">
                       <div className="card-input-div-date">
                         <label htmlFor="card-date">Valid</label>
-                        <input
-                          type="text"
-                          name=""
-                          id="card-date"
-                          placeholder="mm/yy"
-                        />
+                        <input type="text" id="card-date" placeholder="mm/yy" />
                       </div>
-
                       <div className="card-input-div-date">
                         <label htmlFor="card-date">CVV</label>
-                        <input
-                          type="text"
-                          name=""
-                          id="card-date"
-                          placeholder="cvv"
-                        />
+                        <input type="text" id="card-date" placeholder="cvv" />
                       </div>
                     </div>
                     <div className="upi-method-div3">
-                      <button>pay</button>
+                      <button onClick={handlePay}>pay</button>
                     </div>
                   </div>
                 )}
 
+                {/* Netbanking Method */}
                 {paymentMethod === "netbanking" && (
                   <div className="netbanking-method">
                     <div className="netbanking-method-div1">
@@ -260,14 +265,14 @@ const PaymentDetails = () => {
                         </div>
                       </div>
                       <hr />
-
                       <div className="upi-method-div3">
-                        <button>pay</button>
+                        <button onClick={handlePay}>pay</button>
                       </div>
                     </div>
                   </div>
                 )}
 
+                {/* COD */}
                 {paymentMethod === "cod" && (
                   <div className="cod-method">
                     <div className="cod-method-div1">
@@ -277,17 +282,17 @@ const PaymentDetails = () => {
                       </p>
                     </div>
                     <div className="upi-method-div3">
-                      <button onClick={oderClick}>place order</button>
+                      <button onClick={handlePay}>place order</button>
                     </div>
                   </div>
                 )}
 
+                {/* Gift Card */}
                 {paymentMethod === "giftcard" && (
                   <div className="giftcard-method">
                     <div className="giftcard-method-div1">
                       <p>upto 15 gift cards can be added per transaction</p>
                     </div>
-
                     <div className="giftcard-method-div2">
                       <div className="giftcard-input-div">
                         <label htmlFor="voucher-number">voucher number</label>
@@ -297,7 +302,6 @@ const PaymentDetails = () => {
                           placeholder="enter voucher number"
                         />
                       </div>
-
                       <div className="giftcard-input-div">
                         <label htmlFor="voucher-number">voucher pin</label>
                         <input
@@ -307,9 +311,8 @@ const PaymentDetails = () => {
                         />
                       </div>
                     </div>
-
                     <div className="giftcard-method-div3">
-                      <button>add gift card</button>
+                      <button onClick={handlePay}>add gift card</button>
                     </div>
                   </div>
                 )}
@@ -317,37 +320,53 @@ const PaymentDetails = () => {
             </div>
             <div className="complete-payment-details">
               <div className="payment-details-div">
-                {productData.length > 0 && (
-                  <div className="payment-details-div1">
-                    <div className="payment-details-div1-price-summary">
-                      <h1>price ({productData.length} item)</h1>
-                      <p>₹{totalPrice}</p>
-                    </div>
-                    <div className="payment-details-div1-price-summary">
-                      <h1>price ({productData.length} item)</h1>
-                      <p>₹{totalPrice}</p>
-                    </div>
-                    <div className="payment-details-div1-price-summary">
-                      <h1>delivery charges</h1>
-                      <p>Free</p>
-                    </div>
-                    <div className="payment-details-div1-price-summary">
-                      <h1>platform fees</h1>
-                      <p>₹4</p>
-                    </div>
-                    <hr />
-                    <div className="payment-total-amount">
-                      <h1>total amount</h1>
-                      <p>₹{totalPrice + 4}</p>
-                    </div>
+                <div className="payment-details-div1">
+                  <div className="payment-details-div1-price-summary">
+                    <h1>price (1 item)</h1>
+                    <p>₹347</p>
                   </div>
-                )}
+                  <div className="payment-details-div1-price-summary">
+                    <h1>delivery charges</h1>
+                    <p>Free</p>
+                  </div>
+                  <div className="payment-details-div1-price-summary">
+                    <h1>platform fees</h1>
+                    <p>₹4</p>
+                  </div>
+                  <hr />
+                  <div className="payment-total-amount">
+                    <h1>total amount</h1>
+                    <p>₹347</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Animation Overlay */}
+      {showAnimation && (
+        <div className="overlay">
+          <div className="animation-card">
+            {!animationDone ? (
+              <>
+                <div className="truck">🚚</div>
+                <h2>Placing your order...</h2>
+              </>
+            ) : (
+              <>
+                <div className="checkmark-circle">
+                  <span className="checkmark">✓</span>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };
+
 export default PaymentDetails;

@@ -8,7 +8,8 @@ import BackEndApi from "../../Utils/httpclint.js";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import MostSellingProducts from "../MostSellingProducts.jsx"
+import MostSellingProducts from "../MostSellingProducts.jsx";
+import DiscountOnProducts from "../DiscountOnProducts.jsx";
 
 const ProductDetails = () => {
   const Navigate = useNavigate();
@@ -34,15 +35,17 @@ const ProductDetails = () => {
       discount: productDetails.discount,
       discountPrice: productDetails.discountPrice,
       quantity: 1,
-
-    }
+    };
 
     try {
-      const response = await BackEndApi.post("/cart/add-CartCollection", payload);
+      const response = await BackEndApi.post(
+        "/cart/add-CartCollection",
+        payload
+      );
       setCartClick(response.data.data);
       console.log(response);
       alert("product saved in  cart successfully");
-      Navigate('/cart');
+      Navigate("/cart");
     } catch (error) {
       console.log(error);
     }
@@ -69,7 +72,6 @@ const ProductDetails = () => {
       <Header />
       {productDetails.productName && (
         <div className="container productDetails-main-container">
-
           <div className="row productDetails-constainer">
             <div className="productDetails-img-container">
               <div className="product-image-wrapper shadow-sm p-3 rounded bg-white position-relative">
@@ -110,8 +112,9 @@ const ProductDetails = () => {
                       key={idx}
                       src={img}
                       alt={`thumb-${idx}`}
-                      className={`thumbnail ${mainImage === img ? "active" : ""
-                        }`}
+                      className={`thumbnail ${
+                        mainImage === img ? "active" : ""
+                      }`}
                       onMouseEnter={() => setMainImage(img)}
                     />
                   ))}
@@ -386,12 +389,11 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-
         </div>
       )}
       <MostSellingProducts />
-      {/* <Elctronics />
-      <Elctronics /> */}
+      <DiscountOnProducts />
+      {/* <Elctronics /> */}
       <Footer />
     </>
   );
