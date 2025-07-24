@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import BackEndApi from "../../Utils/httpclint";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [productData, setProductData] = useState([]);
+
+  const GetingProduct = async () => {
+    try {
+      const response = await BackEndApi.get("/cart/get-all-CartCollection");
+      const withQuantity = response.data.data.map((item) => ({
+        ...item,
+        quantity: item.quantity || 1,
+      }));
+      setProductData(withQuantity);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    GetingProduct();
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
@@ -14,7 +35,7 @@ const Header = () => {
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
-                <input type="text" placeholder="Serach your product here " />
+                <input type="text" placeholder="Search your product here" />
                 <i className="bi bi-search"></i>
               </div>
 
