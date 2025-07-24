@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import BackEndApi from "../../Utils/httpclint";
 import { useState, useEffect } from "react";
+import { BsHeart } from "react-icons/bs";
 
 const Header = () => {
   const [productData, setProductData] = useState([]);
@@ -22,7 +23,6 @@ const Header = () => {
   useEffect(() => {
     GetingProduct();
   }, []);
-
   return (
     <>
       <div className="container-fluid">
@@ -83,12 +83,17 @@ const Header = () => {
               <button className="btn btn-success">
                 <i className="bi bi-shop me-2"></i> Become a Seller
               </button>
-
+              <div>
+                <Link to="/Wishlist">
+                  <BsHeart className="heartIcon" />
+                  <span className="cart-badge1">{productData.length}</span>
+                </Link>
+              </div>
               <div className="cart-wrapper">
                 <Link to="/cart">
                   <FaCartShopping className="cartIcon" />
+                  <span className="cart-badge">{productData.length}</span>
                 </Link>
-                <span className="cart-badge">{productData.length}</span>
               </div>
             </div>
           </div>
