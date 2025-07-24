@@ -40,9 +40,6 @@ const PaymentDetails = () => {
     }, 2000);
   };
 
-  const oderClick = () => {
-    console.log("clicked");
-  };
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/cart/get-all-CartCollection");

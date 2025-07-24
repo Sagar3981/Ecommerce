@@ -306,7 +306,7 @@ const CheckOutDetails = () => {
                                                     <div className="cart-product-image-div">
                                                         <img
                                                             className="cart-product-image"
-                                                            src={row.image || "/default.jpg"}
+                                                            src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
                                                             alt="product"
                                                         />
                                                     </div>

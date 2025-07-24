@@ -3,6 +3,7 @@ import Footer from "../common/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import BackEndApi from "../../Utils/httpclint";
+import { Link } from "react-router-dom";
 
 const AllSubCategories = () => {
     const [allSubcategory, setAllSubCategory] = useState([]);
@@ -33,23 +34,26 @@ const AllSubCategories = () => {
     return (
         <>
             <Header />
-            <div className="AllSubCategories">
-                {allSubcategory.length > 0 ? (
-                    allSubcategory.map((row) => (
-                        <div className="allPhones" key={row._id}>
-                            <img
-                                src="/assets/SubCategoriesImgs/phoneImg-removebg-preview.png"
-                                alt=""
-                            />
-                            <h2 className="allphoneName">{row.subCategory}</h2>
-                        </div>
-                    ))
-                ) : (
-                    <p style={{ textAlign: "center", padding: "20px" }}>
-                        No subcategories found for this category.
-                    </p>
-                )}
-            </div>
+            <Link to="/subCategories">
+                <div className="AllSubCategories">
+                    {allSubcategory.length > 0 ? (
+                        allSubcategory.map((row) => (
+
+                            <div className="allPhones" key={row._id}>
+                                <img
+                                    src="/assets/SubCategoriesImgs/phoneImg-removebg-preview.png"
+                                    alt=""
+                                />
+                                <h2 className="allphoneName">{row.subCategory}</h2>
+                            </div>
+                        ))
+                    ) : (
+                        <p style={{ textAlign: "center", padding: "20px" }}>
+                            No subcategories found for this category.
+                        </p>
+                    )}
+                </div>
+            </Link>
             <Footer />
         </>
     );
