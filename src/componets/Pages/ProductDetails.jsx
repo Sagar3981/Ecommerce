@@ -393,7 +393,7 @@ const ProductDetails = () => {
       )}
       <MostSellingProducts />
       <DiscountOnProducts />
-      {/* <Elctronics /> */}
+      <Elctronics />
       <Footer />
     </>
   );

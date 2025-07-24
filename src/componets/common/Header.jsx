@@ -23,24 +23,19 @@ const Header = () => {
   useEffect(() => {
     GetingProduct();
   }, []);
-
   return (
     <>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 headercard">
             <Link to="/">
-              <img
-                src="/assets/img/logo.png"
-                alt="Logo"
-                className="logo"
-              />
+              <img src="/assets/img/logo.png" alt="Logo" className="logo" />
             </Link>
 
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
-                <input type="text" placeholder="Search your product here" />
+                <input type="text" placeholder="Serach your product here " />
                 <i className="bi bi-search"></i>
               </div>
 
