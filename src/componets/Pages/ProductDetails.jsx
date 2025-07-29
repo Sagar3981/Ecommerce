@@ -50,8 +50,9 @@ const ProductDetails = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
-    // addClick()
+    // addClick();
     GetProductDetails();
   }, []);
   const images = [

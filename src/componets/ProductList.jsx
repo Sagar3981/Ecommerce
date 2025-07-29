@@ -11,9 +11,12 @@ const ProductList = () => {
 
   const GetingProduct = async () => {
     try {
-      const response = await BackEndApi.get("/product/getallproducts", wishlisted);
+      const response = await BackEndApi.get(
+        "/product/getallproducts",
+        wishlisted
+      );
       setProductData(response.data.data);
-      console.log("products data", response)
+      console.log("products data", response);
     } catch (error) {
       console.log(error);
     }
@@ -48,7 +51,6 @@ const ProductList = () => {
     }
   };
 
-
   return (
     <div className="ProductList">
       {productData.map((row) => (
@@ -56,7 +58,6 @@ const ProductList = () => {
           <IoIosHeart
             className="wishlistIcon"
             onClick={() => toggleWishlist(row)}
-
             style={{
               color: wishlisted[row._id] ? "red" : "gray",
               cursor: "pointer",

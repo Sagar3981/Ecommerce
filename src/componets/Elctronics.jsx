@@ -24,7 +24,7 @@ const Elctronics = () => {
       heading: "Noise",
     },
     {
-      img: "assets/img/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.webp",
+      img: "/public/assets/img/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.webp",
       description: "Wireless Headphones",
       heading: "Bose",
     },

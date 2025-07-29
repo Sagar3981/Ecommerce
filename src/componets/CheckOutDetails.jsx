@@ -47,7 +47,7 @@ const CheckOutDetails = () => {
 
   const handleRemove = async (id) => {
     try {
-      await BackEndApi.delete(`/cart/delete-cart-item/${id}`);
+      await BackEndApi.delete("/cart/delete-cart-item/${id}");
       setProductData((prev) => prev.filter((item) => item._id !== id));
     } catch (error) {
       console.log("Delete Error:", error.response?.data || error.message);
@@ -77,8 +77,9 @@ const CheckOutDetails = () => {
         <div className="checkout-deatils">
           {/* Step 1: Login */}
           <div
-            className={`login-change-div ${sectionChange === "login" ? "selected-login-change-div" : ""
-              }`}
+            className={`login-change-div ${
+              sectionChange === "login" ? "selected-login-change-div" : ""
+            }`}
           >
             <div className="login-change-div1">
               <p className="login-change-div-serial-number">1</p>
@@ -148,8 +149,9 @@ const CheckOutDetails = () => {
 
           {/* Step 2: Address */}
           <div
-            className={`login-change-div ${sectionChange === "address" ? "selected-address-div" : ""
-              }`}
+            className={`login-change-div ${
+              sectionChange === "address" ? "selected-address-div" : ""
+            }`}
           >
             <div className="login-change-div1">
               <p className="login-change-div-serial-number">2</p>
@@ -274,8 +276,9 @@ const CheckOutDetails = () => {
 
           {/* Step 3: Order Summary */}
           <div
-            className={`login-change-div ${sectionChange === "summary" ? "selected-order-summary" : ""
-              }`}
+            className={`login-change-div ${
+              sectionChange === "summary" ? "selected-order-summary" : ""
+            }`}
           >
             <div className="login-change-div1">
               <p className="login-change-div-serial-number">3</p>
