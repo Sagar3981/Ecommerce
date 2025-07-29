@@ -35,7 +35,8 @@ const ProductList = () => {
     const payload = {
       productId: product._id,
       productName: product.productName,
-      price: product.price
+      price: product.price,
+      discountPrice: product.discountPrice
     };
 
     try {
@@ -82,12 +83,12 @@ const ProductList = () => {
             </p>
             <h5>
               <LiaRupeeSignSolid />
-              3,299{" "}
+              {row.discountPrice}
               <span className="crosingPrice">
                 <LiaRupeeSignSolid />
-                9,999
+                {row.price}
               </span>
-              <span className="off">65% off</span>
+              <span className="off">{row.discount}% off</span>
             </h5>
           </Link>
         </div>

@@ -21,9 +21,13 @@ const Wishlist = () => {
         }
     };
 
-    const handleRemove = (index) => {
-        const updatedData = wishlist.filter((_, i) => i !== index);
-        setWishlist(updatedData);
+    const handleRemove = async (id) => {
+        try {
+            await BackEndApi.delete(`/favorite/delete-Favorite-item/${id}`);
+            setWishlist((prev) => prev.filter((item) => item._id !== id));
+        } catch (error) {
+            console.log("Delete Error:", error.response?.data || error.message);
+        }
     };
 
     useEffect(() => {
@@ -88,18 +92,18 @@ const Wishlist = () => {
                         <h2>My Wishlist ({wishlist.length})</h2>
                     </div>
 
-                    {wishlist.map((row, index) => (
-                        <div className="MY-Wishlist" key={index}>
+                    {wishlist.map((row) => (
+                        <div className="MY-Wishlist" key={row._id}>
                             <div className="MyWishlistImg">
                                 <img src="/assets/img/boult-earpods.jpg" alt="Product" />
                                 <div>
                                     <h6>{row.productName}</h6>
-                                    <p>price: ₹{row.price}</p>
+                                    <p>price: ₹{row.discountPrice}</p>
                                 </div>
                             </div>
                             <MdDelete
                                 className="deleteIcon"
-                                onClick={() => handleRemove(index)}
+                                onClick={() => handleRemove(row._id)}
                             />
                         </div>
                     ))}
