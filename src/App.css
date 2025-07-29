@@ -1384,15 +1384,15 @@ hr {
   margin: 0px 2px !important;
 }
 .ProductList {
-  width: 100%;
+  width: 80%;
   background-color: white;
   /* margin: 10px 0px 10px 0px; */
   margin: 10px 10px 10px 0px;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 }
 .Product-List {
-  /* width: 310px; */
   height: 450px;
   width: 307px;
   padding: 0px 15px;
@@ -3158,11 +3158,16 @@ hr {
   padding: 15px;
 }
 .deleteIcon {
-  /* margin-left: 267px; */
+  margin-left: 267px;
   color: grey;
   width: 20px;
   height: 20px;
 }
+
+/* .MyWishlist p {
+  margin-left: 31px;
+  margin-top: 25px;
+} */
 .MY-Wishlist {
   display: flex;
   justify-content: space-between;
