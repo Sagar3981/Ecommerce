@@ -3147,9 +3147,8 @@ hr {
 
 .MyWishlistImg {
     display: flex;
-    padding: 20px 30px;
+    /* padding: 20px 0px; */
     gap: 40px;
-    border-bottom: 1px solid rgb(237, 235, 235);
 }
 .MyWishlistImg img {
     width: 120px;
@@ -3165,10 +3164,10 @@ hr {
     height: 20px;
 }
 
-.MyWishlist p {
-    margin-left: 31px;
-    margin-top: 25px;
-}
+/* .MyWishlist p {
+  margin-left: 31px;
+  margin-top: 25px;
+} */
 .MY-Wishlist {
     display: flex;
     justify-content: space-between;
