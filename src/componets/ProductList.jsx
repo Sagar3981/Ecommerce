@@ -7,14 +7,11 @@ import BackEndApi from "../Utils/httpclint.js";
 
 const ProductList = () => {
   const [productData, setProductData] = useState([]);
-  const [wishlisted, setWishlisted] = useState([]);
+  const [wishlisted, setWishlisted] = useState({}); // id -> favoriteId
 
   const GetingProduct = async () => {
     try {
-      const response = await BackEndApi.get(
-        "/product/getallproducts",
-        wishlisted
-      );
+      const response = await BackEndApi.get("/product/getallproducts");
       setProductData(response.data.data);
       console.log("products data", response);
     } catch (error) {
@@ -26,27 +23,70 @@ const ProductList = () => {
     GetingProduct();
   }, []);
 
-  // Toggle wishlist
   const toggleWishlist = async (product) => {
     const id = product._id;
 
-    setWishlisted((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    // If already in wishlist → remove it
+    if (wishlisted[id]) {
+      try {
+        const response = await BackEndApi.delete(
+          `/favorite/delete-Favorite-item/${wishlisted[id]}`
+        );
 
+        if (response.status === 200) {
+          alert("Product removed from favorites.");
+          setWishlisted((prev) => {
+            const updated = { ...prev };
+            delete updated[id];
+            return updated;
+          });
+        }
+      } catch (error) {
+        console.error(
+          "Error removing favorite:",
+          error.response?.data || error.message
+        );
+        alert("Something went wrong. Please try again.");
+      }
+      return;
+    }
+
+    // Else, add to wishlist
     const payload = {
       productId: product._id,
       productName: product.productName,
       price: product.price,
-      discountPrice: product.discountPrice
+      discountPrice: product.discountPrice,
     };
 
     try {
       const response = await BackEndApi.post("/favorite/add-Favorite", payload);
-      // alert("Product saved successfully");
-      console.log("Favorite response:", response.data);
+      const favoriteItem = response.data.data;
+
+      if (response.status === 200) {
+        alert("This product is already in your favorites.");
+      } else if (response.status === 201) {
+        alert("Product added to favorites successfully!");
+      }
+
+      setWishlisted((prev) => ({
+        ...prev,
+        [id]: favoriteItem._id,
+      }));
+
+      console.log("Favorite response:", favoriteItem);
     } catch (error) {
+      const status = error.response?.status;
+      const message = error.response?.data?.message;
+
+      if (status === 422) {
+        alert(
+          message || "Validation failed. Please check the product details."
+        );
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+
       console.error("Error saving favorite:", error);
     }
   };

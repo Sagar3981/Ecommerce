@@ -26,7 +26,6 @@ const ProductDetails = () => {
     }
   };
   const addClick = async () => {
-    // e.preventDefault();
     const payload = {
       productID: productDetails._id,
       productName: productDetails.productName,
@@ -42,12 +41,27 @@ const ProductDetails = () => {
         "/cart/add-CartCollection",
         payload
       );
-      setCartClick(response.data.data);
-      console.log(response);
-      alert("product saved in  cart successfully");
-      Navigate("/cart");
+
+      if (response.status === 200 || response.status === 201) {
+        alert("Product added to cart successfully!");
+        setCartClick(response.data.data);
+        // Navigate("/cart");
+      }
     } catch (error) {
-      console.log(error);
+      const status = error.response?.status;
+      const message = error.response?.data?.message;
+
+      if (status === 409) {
+        alert("This product is already in the cart.");
+      } else if (status === 422) {
+        alert(
+          message || "Validation failed. Please check the product details."
+        );
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+
+      console.log("Add to cart error:", error);
     }
   };
 
