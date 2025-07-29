@@ -2,11 +2,11 @@ import { LiaRupeeSignSolid } from "react-icons/lia";
 import { IoMdStar } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosHeart } from "react-icons/io";
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import BackEndApi from "../Utils/httpclint.js";
 const ProductList = () => {
   const [productData, setProductData] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/product/getallproducts");
@@ -16,6 +16,29 @@ const ProductList = () => {
       console.log(error);
     }
   };
+
+  const addClick = async () => {
+    // e.preventDefault();
+    const payload = {
+      productID: ProductList._id,
+      productName: ProductList.productName,
+      description: ProductList.description,
+      price: ProductList.price,
+      discount: ProductList.discount,
+      discountPrice: ProductList.discountPrice,
+      quantity: 1,
+    };
+
+    try {
+      const response = await BackEndApi.post("/favorite/add-Favorite", payload);
+      setWishlist(response.data.data);
+      console.log(response);
+      alert("product saved in  cart successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     GetingProduct();
   }, []);
@@ -23,15 +46,11 @@ const ProductList = () => {
     <>
       <div className="ProductList">
         {productData.map((row) => (
-          <Link to={`/ProductDetails/${row._id}`} key={row._id}>
-            <motion.div
-              className="Product-List"
-              whileHover={{ scale: 1.05, y: -1 }}
-              transition={{ duration: 0.9 }}
-            >
-              <IoIosHeart className="wishlistIcon" />
+          <div className="Product-List" key={row._id}>
+            <IoIosHeart className="wishlistIcon" onClick={addClick} />
+            <Link to={`/ProductDetails/${row._id}`}>
               <div className="watch1Img">
-                <motion.img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
+                <img src="/assets/SubCategoriesImgs/watch1.png" alt="" />
               </div>
               <div className="whatchColors">
                 <p className="color1"></p>
@@ -58,8 +77,8 @@ const ProductList = () => {
                 </span>
                 <span className="off">65% off</span>
               </h5>
-            </motion.div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
     </>
