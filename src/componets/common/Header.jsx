@@ -48,7 +48,7 @@ const Header = () => {
             <div className="searchcard">
               <i className="bi bi-house homeicon"></i>
               <div className="searchcontainer">
-                <input type="text" placeholder="Serach your product here " />
+                <input type="text" placeholder="Search your product here" />
                 <i className="bi bi-search"></i>
               </div>
 
