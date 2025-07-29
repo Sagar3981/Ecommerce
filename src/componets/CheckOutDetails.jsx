@@ -439,4 +439,5 @@ const CheckOutDetails = () => {
     </>
   );
 };
+
 export default CheckOutDetails;

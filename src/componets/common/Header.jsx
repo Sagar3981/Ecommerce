@@ -6,7 +6,7 @@ import { BsHeart } from "react-icons/bs";
 
 const Header = () => {
   const [productData, setProductData] = useState([]);
-
+  const [wishlist, setWishlist] = useState([])
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/cart/get-all-CartCollection");
@@ -19,9 +19,22 @@ const Header = () => {
       console.log(error);
     }
   };
+  const GetingWishlist = async () => {
+    try {
+      const response = await BackEndApi.get("/favorite/get-All-Favorites");
+      const withQuantity = response.data.data.map((item) => ({
+        ...item,
+        quantity: item.quantity || 1,
+      }));
+      setWishlist(withQuantity);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     GetingProduct();
+    GetingWishlist();
   }, []);
   return (
     <>
@@ -86,7 +99,7 @@ const Header = () => {
               <div>
                 <Link to="/Wishlist">
                   <BsHeart className="heartIcon" />
-                  <span className="cart-badge1">{productData.length}</span>
+                  <span className="cart-badge1">{wishlist.length}</span>
                 </Link>
               </div>
               <div className="cart-wrapper">
