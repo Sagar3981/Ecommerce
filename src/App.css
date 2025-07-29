@@ -3146,9 +3146,8 @@ hr {
 
 .MyWishlistImg {
     display: flex;
-    padding: 20px 30px;
+    /* padding: 20px 0px; */
     gap: 40px;
-    border-bottom: 1px solid rgb(237, 235, 235);
 }
 .MyWishlistImg img {
     width: 120px;
@@ -3158,8 +3157,15 @@ hr {
     padding: 15px;
 }
 .deleteIcon {
-    margin-left: 267px;
+    /* margin-left: 267px; */
     color: grey;
     width: 20px;
     height: 20px;
+}
+.MY-Wishlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgb(237, 235, 235);
 }
