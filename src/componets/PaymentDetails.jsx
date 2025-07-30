@@ -56,8 +56,9 @@ const PaymentDetails = () => {
   useEffect(() => {
     GetingProduct();
   }, []);
+  const totalItems = productData.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = productData.reduce(
-    (acc, item) => acc + (item.price || 0) * (item.quantity || 1),
+    (sum, item) => sum + parseFloat(item.price) * item.quantity,
     0
   );
   return (
@@ -78,9 +79,8 @@ const PaymentDetails = () => {
             <div className="complete-payment-method">
               <div className="complete-payment-method-div1">
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "upi" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "upi" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("upi")}
                 >
                   <div className="payment-upi">
@@ -93,9 +93,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "card" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "card" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("card")}
                 >
                   <div className="payment-upi">
@@ -113,9 +112,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "netbanking" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "netbanking" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("netbanking")}
                 >
                   <div className="payment-upi">
@@ -125,9 +123,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "cod" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "cod" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("cod")}
                 >
                   <div className="payment-upi">
@@ -137,9 +134,8 @@ const PaymentDetails = () => {
                 </div>
                 <hr className="payment-hr" />
                 <div
-                  className={`payment-column ${
-                    paymentMethod === "giftcard" ? "selected-method" : ""
-                  }`}
+                  className={`payment-column ${paymentMethod === "giftcard" ? "selected-method" : ""
+                    }`}
                   onClick={() => handlePaymentMethodChange("giftcard")}
                 >
                   <div className="payment-upi">
@@ -320,29 +316,31 @@ const PaymentDetails = () => {
                 )}
               </div>
             </div>
-            <div className="complete-payment-details">
-              <div className="payment-details-div">
-                <div className="payment-details-div1">
-                  <div className="payment-details-div1-price-summary">
-                    <h1>price (1 item)</h1>
-                    <p>₹347</p>
-                  </div>
-                  <div className="payment-details-div1-price-summary">
-                    <h1>delivery charges</h1>
-                    <p>Free</p>
-                  </div>
-                  <div className="payment-details-div1-price-summary">
-                    <h1>platform fees</h1>
-                    <p>₹4</p>
-                  </div>
-                  <hr />
-                  <div className="payment-total-amount">
-                    <h1>total amount</h1>
-                    <p>₹347</p>
+            {productData.map((row) => (
+              <div className="complete-payment-details">
+                <div className="payment-details-div">
+                  <div className="payment-details-div1">
+                    <div className="payment-details-div1-price-summary">
+                      <h1>price ({totalItems} item)</h1>
+                      <p>₹{row.price}</p>
+                    </div>
+                    <div className="payment-details-div1-price-summary">
+                      <h1>delivery charges</h1>
+                      <p>Free</p>
+                    </div>
+                    <div className="payment-details-div1-price-summary">
+                      <h1>platform fees</h1>
+                      <p>₹4</p>
+                    </div>
+                    <hr />
+                    <div className="payment-total-amount">
+                      <h1>total amount</h1>
+                      <p>₹{totalPrice + 4}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

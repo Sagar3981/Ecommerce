@@ -127,9 +127,8 @@ const ProductDetails = () => {
                       key={idx}
                       src={img}
                       alt={`thumb-${idx}`}
-                      className={`thumbnail ${
-                        mainImage === img ? "active" : ""
-                      }`}
+                      className={`thumbnail ${mainImage === img ? "active" : ""
+                        }`}
                       onMouseEnter={() => setMainImage(img)}
                     />
                   ))}
@@ -139,9 +138,11 @@ const ProductDetails = () => {
                 <button className="custom-cart" onClick={addClick}>
                   <FaShoppingCart /> <span>ADD TO CART</span>
                 </button>
-                <button className="custom-buy">
-                  <FaBolt /> <span>BUY NOW</span>
-                </button>
+                <Link to="/PaymentPage">
+                  <button className="custom-buy">
+                    <FaBolt /> <span>BUY NOW</span>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="productDetails-info-container">

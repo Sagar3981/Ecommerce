@@ -7,6 +7,7 @@ import { IoMdWallet } from "react-icons/io";
 import { ImSwitch } from "react-icons/im";
 import BackEndApi from "../Utils/httpclint";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Wishlist = () => {
     const [wishlist, setWishlist] = useState([]);
@@ -92,21 +93,31 @@ const Wishlist = () => {
                         <h2>My Wishlist ({wishlist.length})</h2>
                     </div>
 
-                    {wishlist.map((row) => (
-                        <div className="MY-Wishlist" key={row._id}>
-                            <div className="MyWishlistImg">
-                                <img src="/assets/img/boult-earpods.jpg" alt="Product" />
-                                <div>
-                                    <h6>{row.productName}</h6>
-                                    <p>price: ₹{row.discountPrice}</p>
-                                </div>
-                            </div>
-                            <MdDelete
-                                className="deleteIcon"
-                                onClick={() => handleRemove(row._id)}
-                            />
+                    {wishlist.length === 0 ? (
+                        <div className="no-wishlist-data" style={{ textAlign: "center", marginTop: "40px" }}>
+                            <h3>Your wishlist is empty</h3>
+                            <p>Looks like you haven’t saved any items yet.</p>
+                            <Link to="/subCategories">
+                                <button>Shop Now</button>
+                            </Link>
                         </div>
-                    ))}
+                    ) : (
+                        wishlist.map((row) => (
+                            <div className="MY-Wishlist" key={row._id}>
+                                <div className="MyWishlistImg">
+                                    <img src="/assets/img/boult-earpods.jpg" alt="Product" />
+                                    <div>
+                                        <h6>{row.productName}</h6>
+                                        <p>price: ₹{row.discountPrice}</p>
+                                    </div>
+                                </div>
+                                <MdDelete
+                                    className="deleteIcon"
+                                    onClick={() => handleRemove(row._id)}
+                                />
+                            </div>
+                        ))
+                    )}
                 </div>
             </div>
 

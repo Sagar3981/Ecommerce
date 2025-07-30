@@ -15,7 +15,7 @@ const CartProducts = () => {
       }));
       setProductData(withQuantity);
     } catch (error) {
-      console.log(error);
+      console.error("Fetch Cart Error:", error);
     }
   };
 
@@ -37,9 +37,13 @@ const CartProducts = () => {
     }
   };
 
-  const handleRemove = (index) => {
-    const updatedData = productData.filter((_, i) => i !== index);
-    setProductData(updatedData);
+  const handleRemove = async (id) => {
+    try {
+      await BackEndApi.delete(`/cart/delete-Cart-item/${id}`);
+      setProductData((prev) => prev.filter((item) => item._id !== id));
+    } catch (error) {
+      console.error("Delete Cart Error:", error.response?.data || error.message);
+    }
   };
 
   const formatCurrency = (amount) => `₹${amount.toFixed(2)}`;
@@ -52,7 +56,7 @@ const CartProducts = () => {
 
   const totalDiscount = productData.reduce((sum, item) => {
     const price = parseFloat(item.price);
-    const discountPercent = parseFloat(item.discount);
+    const discountPercent = parseFloat(item.discount || 0);
     const discountAmount = (price * discountPercent) / 100;
     return sum + discountAmount * item.quantity;
   }, 0);
@@ -68,109 +72,123 @@ const CartProducts = () => {
         </div>
 
         <div className="cart-products">
-          {productData.map((row, index) => {
-            const price = parseFloat(row.price);
-            const discountPercent = parseFloat(row.discount);
-            const discountValue = (price * discountPercent) / 100;
-            const totalDiscountValue = discountValue * row.quantity;
-            const discountedPrice = (price - discountValue) * row.quantity;
+          {productData.length === 0 ? (
+            <div className="no-cart-data">
+              <h2>Your cart is empty</h2>
+              <p>Looks like you haven't added anything to your cart yet.</p>
+              <Link to="/subCategories">
+                <button>Shop Now</button>
+              </Link>
+            </div>
+          ) : (
+            productData.map((row, index) => {
+              const price = parseFloat(row.price);
+              const discountPercent = parseFloat(row.discount || 0);
+              const discountValue = (price * discountPercent) / 100;
+              const totalDiscountValue = discountValue * row.quantity;
+              const discountedPrice = (price - discountValue) * row.quantity;
 
-            return (
-              <div className="cart-single-product" key={index}>
-                <div className="cart-product-top-row">
-                  <div className="cart-product-image-div">
-                    <img
-                      className="cart-product-image"
-                      src="/public/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
-                      alt="product"
-                    />
-                  </div>
-                  <div className="cart-product-detils">
-                    <h1 className="cart-product-name">
-                      {row.productName} + {row.description}
-                    </h1>
-                    <h1 className="cart-product-size">Size: L</h1>
-                    <h1 className="cart-product-seller">Seller:AwesomefabShoppingPvt</h1>
-                    <div className="cart-product-price">
-                      <p className="product-price">₹{price}</p>
-                      <p className="discount-price">{formatCurrency(discountedPrice)}</p>
-                      <p className="discount-off">
-                        You save {formatCurrency(totalDiscountValue)}
-                      </p>
-                      <p className="availabile-offers">2-offers-available</p>
+              return (
+                <div className="cart-single-product" key={row._id}>
+                  <div className="cart-product-top-row">
+                    <div className="cart-product-image-div">
+                      <img
+                        className="cart-product-image"
+                        src="/assets/img/xl-fms-181-fllseve-pop-ol-force-original-imah459zhrvvjp4m.webp"
+                        alt="product"
+                      />
+                    </div>
+                    <div className="cart-product-detils">
+                      <h1 className="cart-product-name">
+                        {row.productName} + {row.description}
+                      </h1>
+                      <h1 className="cart-product-size">Size: L</h1>
+                      <h1 className="cart-product-seller">Seller: AwesomefabShoppingPvt</h1>
+                      <div className="cart-product-price">
+                        <p className="product-price">₹{price}</p>
+                        <p className="discount-price">{formatCurrency(discountedPrice)}</p>
+                        <p className="discount-off">
+                          You save {formatCurrency(totalDiscountValue)}
+                        </p>
+                        <p className="availabile-offers">2-offers-available</p>
+                      </div>
+                    </div>
+                    <div className="delivery-date">
+                      <p>Delivery by Mon Jun 2</p>
                     </div>
                   </div>
-                  <div className="delivery-date">
-                    <p>Delivery by Mon Jun 2</p>
+
+                  <div className="cart-product-buttons">
+                    <div className="quantity-of-product">
+                      <button className="minus-button" onClick={() => DecButton(index)}>-</button>
+                      <button className="minus-button">{row.quantity}</button>
+                      <button className="plus-button" onClick={() => IncButton(index)}>+</button>
+                    </div>
+                    <div className="save-remove">
+                      <button>save for later</button>
+                      <button onClick={() => handleRemove(row._id)}>remove</button>
+                    </div>
                   </div>
                 </div>
-
-                <div className="cart-product-buttons">
-                  <div className="quantity-of-product">
-                    <button className="minus-button" onClick={() => DecButton(index)}>-</button>
-                    <button className="minus-button">{row.quantity}</button>
-                    <button className="plus-button" onClick={() => IncButton(index)}>+</button>
-                  </div>
-                  <div className="save-remove">
-                    <button>save for later</button>
-                    <button onClick={() => handleRemove(index)}>remove</button>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
 
-        <div className="place-order">
-          <Link to="/checkout">
-            <button>place order</button>
-          </Link>
-        </div>
+        {productData.length > 0 && (
+          <div className="place-order">
+            <Link to="/checkout">
+              <button>place order</button>
+            </Link>
+          </div>
+        )}
       </div>
 
-      <div className="price-container">
-        <div className="price-container-sticky">
-          <div className="cart-price-details">
-            <h1>price details</h1>
-            <hr />
-          </div>
-          <div className="price-summary">
-            <div className="price-summary-1">
-              <p>Price ({totalItems} items)</p>
-              <p>{formatCurrency(totalPrice)}</p>
+      {productData.length > 0 && (
+        <div className="price-container">
+          <div className="price-container-sticky">
+            <div className="cart-price-details">
+              <h1>price details</h1>
+              <hr />
             </div>
-            <div className="price-summary-1">
-              <p>Discount</p>
-              <p className="price-itmes">− {formatCurrency(totalDiscount)}</p>
+            <div className="price-summary">
+              <div className="price-summary-1">
+                <p>Price ({totalItems} items)</p>
+                <p>{formatCurrency(totalPrice)}</p>
+              </div>
+              <div className="price-summary-1">
+                <p>Discount</p>
+                <p className="price-itmes">− {formatCurrency(totalDiscount)}</p>
+              </div>
+              <div className="price-summary-1">
+                <p>Delivery Charges</p>
+                <p className="price-itmes">Free</p>
+              </div>
+              <div className="price-summary-1">
+                <p>Protect Promise Fee</p>
+                <p>₹9</p>
+              </div>
+              <hr />
+              <div className="price-summary-1">
+                <p className="total-amount">Total Amount</p>
+                <p>{formatCurrency(totalAmount)}</p>
+              </div>
+              <hr />
+              <div>
+                <p className="you-save">
+                  You will save {formatCurrency(totalDiscount)} on this order
+                </p>
+              </div>
             </div>
-            <div className="price-summary-1">
-              <p>Delivery Charges</p>
-              <p className="price-itmes">Free</p>
-            </div>
-            <div className="price-summary-1">
-              <p>Protect Promise Fee</p>
-              <p>₹9</p>
-            </div>
-            <hr />
-            <div className="price-summary-1">
-              <p className="total-amount">Total Amount</p>
-              <p>{formatCurrency(totalAmount)}</p>
-            </div>
-            <hr />
-            <div>
-              <p className="you-save">
-                You will save {formatCurrency(totalDiscount)} on this order
+            <div className="verify-div">
+              <MdVerifiedUser className="MdVerifiedUser-icon" />
+              <p>
+                Safe and Secure Payments. Easy returns. 100% Authentic products.
               </p>
             </div>
           </div>
-          <div className="verify-div">
-            <MdVerifiedUser className="MdVerifiedUser-icon" />
-            <p>
-              Safe and Secure Payments. Easy returns. 100% Authentic products.
-            </p>
-          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
