@@ -33,15 +33,19 @@ const CartHeader = () => {
                     </a>
                   </Link>
                 </li>
+                {/* <li>
+                  <Link to="/AllOrders">
+                    <a className="dropdown-item" href="#">
+                      Orders
+                    </a>
+                  </Link>
+                </li> */}
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Orders
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Wishlist
-                  </a>
+                  <Link to="/Wishlist">
+                    <a className="dropdown-item" href="#">
+                      Wishlist
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">

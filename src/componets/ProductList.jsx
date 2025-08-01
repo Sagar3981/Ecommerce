@@ -11,7 +11,7 @@ const ProductList = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
 
-  // ✅ Correct way to extract filters from URL
+  // ✅ Extract filters from URL
   const subcategoryId = queryParams.get("subcategory");
   const categoryId = queryParams.get("category");
   const brandId = queryParams.get("brand");
@@ -23,13 +23,15 @@ const ProductList = () => {
 
       // ✅ Apply filters
       if (subcategoryId) {
-        products = products.filter((item) => item.subCategoryId === subcategoryId);
+        products = products.filter(
+          (item) => item.subCategory === subcategoryId
+        );
       }
       if (categoryId) {
-        products = products.filter((item) => item.categoryId === categoryId);
+        products = products.filter((item) => item.category === categoryId);
       }
       if (brandId) {
-        products = products.filter((item) => item.brandId === brandId);
+        products = products.filter((item) => item.brand === brandId);
       }
 
       setProductData(products);
@@ -47,7 +49,9 @@ const ProductList = () => {
 
     if (wishlisted[id]) {
       try {
-        const response = await BackEndApi.delete(`/favorite/delete-Favorite-item/${wishlisted[id]}`);
+        const response = await BackEndApi.delete(
+          `/favorite/delete-Favorite-item/${wishlisted[id]}`
+        );
         if (response.status === 200) {
           alert("Product removed from favorites.");
           setWishlisted((prev) => {

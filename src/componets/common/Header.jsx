@@ -6,7 +6,7 @@ import { BsHeart } from "react-icons/bs";
 
 const Header = () => {
   const [productData, setProductData] = useState([]);
-  const [wishlist, setWishlist] = useState([])
+  const [wishlist, setWishlist] = useState([]);
   const GetingProduct = async () => {
     try {
       const response = await BackEndApi.get("/cart/get-all-CartCollection");

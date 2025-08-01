@@ -17,7 +17,9 @@ const PageRoutes = () => {
   const AllOrders = lazy(() => import("../componets/Pages/AllOrders.jsx"));
   const OrderDetails = lazy(() => import("./MyorderStatus.jsx"));
   const Profile = lazy(() => import("./Profile.jsx"));
-  const AllSubCategories = lazy(() => import("../componets/Pages/allSubCategories.jsx"));
+  const AllSubCategories = lazy(() =>
+    import("../componets/Pages/allSubCategories.jsx")
+  );
   const Wishlist = lazy(() => import("../componets/Wishlist.jsx"));
   return (
     <>
